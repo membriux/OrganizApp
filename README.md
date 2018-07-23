@@ -18,21 +18,32 @@ As soon as the app launches, the user is taken to the home page, where there is 
   - `organizationUsername: String`
   - `email: String`
   - `calendarEmail: String`
-  - `location: Dictionary/Hashmap`
+  - `location: Array`
     - `streetAddress: String`
-    - 
+    - `city: String`
+    - `state: String`
   
 - `Post` Firebase Data model
   - `organizationUsername: String`
-  - `images: String`
-  - 
+  - `images: [String]`
+  - `time: Date`
 
 
 ## Views
-[What custom views do we need to create? Include pictures of your prototypes/sketches!]
+- `HomeView`
+  - `PostsTableViewCell`
+- `CalendarView`
+- `UpcomingEventsView`
+- `SideMenuView`
+- `AddOrganizationView`
 
 ## Controllers
-[What controllers will we need? What will they do?]
+- `HomeViewController`: Display posts/news feed about the organization.
+  - `PostsTableViewCell`: Cell containing the post along with a description, date it was posted, and maybe some pictures.
+- `CalendarView`
+- `UpcomingEventsView`
+- `SideMenuView`
+- `AddOrganizationView`
 
 ## Other
 [Any other frameworks / things we will need? Helpers? Services?]
