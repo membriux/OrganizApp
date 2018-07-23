@@ -56,23 +56,47 @@ As soon as the app launches, the user is taken to the home page, where there is 
 - `OrganizationSettingsViewController`: Set the contact information of the organization
 
 ## Other
-- Firebase Service [Any other frameworks / things we will need? Helpers? Services?]
-- 
+- Services
+  - Firebase Service (Authentication)
+  
+- APIs
+  - Google Calendar API
+
+- Helpers: 
+  - CreateAdminUser
+  - CreateAnonymousUser
+  - CreateOrganization
+  - CreatePost 
+  - RetreivePosts
+  - RetrieveEvents
+  - AddOrganization
+  - UpdateOrganizationInfo
+  - DeletePost
+  - DeleteOrganization
 
 # Weekly Milestone
 ## Week 4 - Usable Build
 [List of tasks needed to be complete before you can start user testing]
-- task 1
-- task 2
-- task 3
-- [...]
+- [Monday] Finish creating design document
+- [Tuesday] Finish Create helpers
+  - Be able to create an admin account, anonymous user, organization, and posts
+- [Wednesday] Be able to retrieve organizations and their posts.
+  - Allow anonymous user to add organizations to his list 
+  - Allow anonymous user to delete organizations from his list
+- [Thursday] Update organization contact information and be able to delete organizations
+  - Retrieve information and add it to the contact information
+- [Friday] Retreive google calendar events from google account
+- Display all information in a more nicely fashion
+
 
 ## Week 5 - Finish Features
 [List of tasks to complete the implementation of features]
-- task 1
-- task 2
-- task 3
-- [...]
+- Create UI for the organization news feed
+  - Polish it so that it looks somewhat nice
+- Create UI for events page
+- Create Slide Menu and display the organizations that the user is involved with
+- Add button for "Add Organization" and add it to the table
+- 
 
 ## Week 6 - Polish
 [List of tasks needed to polish and ship to the app store]
