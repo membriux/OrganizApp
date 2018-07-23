@@ -36,7 +36,7 @@ As soon as the app launches, the user is taken to the home page, where there is 
   - `PostsTableViewCell`
 - `CalendarView`
 - `UpcomingEventsTableView`
-  -`UpcomingEventsTableViewCell`
+  - `UpcomingEventsTableViewCell`
 - `SideMenuTableView`
   - `SideMenuTableViewCell`
 - `AddOrganizationView`
@@ -56,7 +56,8 @@ As soon as the app launches, the user is taken to the home page, where there is 
 - `OrganizationSettingsViewController`: Set the contact information of the organization
 
 ## Other
-[Any other frameworks / things we will need? Helpers? Services?]
+- Firebase Service [Any other frameworks / things we will need? Helpers? Services?]
+- 
 
 # Weekly Milestone
 ## Week 4 - Usable Build
