@@ -13,15 +13,17 @@ As soon as the app launches, the user is taken to the home page, where there is 
   - `username: String`
   - `email: String`
   - `realName: String`
+  - `organizationsManaging: String`
   
 - `Organization` Firebase Data Model
-  - `organizationUsername: String`
+  - `organizationID: String`
   - `email: String`
   - `calendarEmail: String`
   - `location: Array`
     - `streetAddress: String`
     - `city: String`
     - `state: String`
+    - `zip: String`
   
 - `Post` Firebase Data model
   - `organizationUsername: String`
@@ -33,17 +35,25 @@ As soon as the app launches, the user is taken to the home page, where there is 
 - `HomeView`
   - `PostsTableViewCell`
 - `CalendarView`
-- `UpcomingEventsView`
-- `SideMenuView`
+- `UpcomingEventsTableView`
+  -`UpcomingEventsTableViewCell`
+- `SideMenuTableView`
+  - `SideMenuTableViewCell`
 - `AddOrganizationView`
+- `AdminView`
+- `OrganizationSettingView`
 
 ## Controllers
 - `HomeViewController`: Display posts/news feed about the organization.
   - `PostsTableViewCell`: Cell containing the post along with a description, date it was posted, and maybe some pictures.
-- `CalendarView`
-- `UpcomingEventsView`
-- `SideMenuView`
-- `AddOrganizationView`
+- `CalendarViewController`: Calendar displaying the month and the events that are ocurring that month. Data pulled from calendar email.
+- `UpcomingEventsTableViewController`: Shows the upcoming events pulled from calendar.
+  -`UpcomingEventsTableViewCellController`: Contains date, title, location, and description of the event.
+- `SideMenuTableViewController`: Displays the organizations that the user is involved in and a button to add organizations to the list.
+  - `SideMenuTableViewCellController`: Contains the organizationID.
+- `AddOrganizationViewController`: Allows user to input organizationID and add it to their list of organizations that they are involved with.
+- `AdminViewController`: Allows the admin of the organization to create a post and modify/update information about the organization
+- `OrganizationSettingsViewController`: Set the contact information of the organization
 
 ## Other
 [Any other frameworks / things we will need? Helpers? Services?]
