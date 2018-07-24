@@ -44,7 +44,7 @@ As soon as the app launches, the user is taken to the home page, where there is 
 - `OrganizationSettingView`
 
 
-This is a rough sketch of the prototype: ![alt text](https://raw.githubusercontent.com/membriux/OrganizApp/blob/master/img.png)
+This is a rough sketch of the prototype: ![alt text](https://raw.githubusercontent.com/membriux/OrganizApp/master/OrganizappPaperPrototype.jpg)
 
 
 ## Controllers
