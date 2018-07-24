@@ -43,6 +43,10 @@ As soon as the app launches, the user is taken to the home page, where there is 
 - `AdminView`
 - `OrganizationSettingView`
 
+
+This is a rough sketch of the prototype: ![alt text](https://raw.githubusercontent.com/membriux/OrganizApp/blob/master/img.png)
+
+
 ## Controllers
 - `HomeViewController`: Display posts/news feed about the organization.
   - `PostsTableViewCell`: Cell containing the post along with a description, date it was posted, and maybe some pictures.
