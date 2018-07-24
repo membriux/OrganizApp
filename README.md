@@ -96,12 +96,14 @@ As soon as the app launches, the user is taken to the home page, where there is 
 - Create UI for events page
 - Create Slide Menu and display the organizations that the user is involved with
 - Add button for "Add Organization" and add it to the table
-- 
+  - Take you to the "add organization" view it on the user's list of organizations
+- Create UI for admin page and for organization editing page
 
 ## Week 6 - Polish
 [List of tasks needed to polish and ship to the app store]
-- task 1
-- task 2
-- task 3
-- [...]
+- Learn how to ship to the appstore
+- Add animations
+- Find the right color scheme
+- Get user testing and make sure there are no errors
+
 
