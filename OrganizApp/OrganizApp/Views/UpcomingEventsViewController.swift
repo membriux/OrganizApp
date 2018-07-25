@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UpcomingEventsViewController.swift
 //  OrganizApp
 //
 //  Created by Memo on 7/24/18.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class UpcomingEventsViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         
     }
-
     
     
     
     
-
+    
+    
 }
 

@@ -7,6 +7,7 @@ target 'OrganizApp' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'FirebaseUI/Auth'
+  # pod 'FirebaseUI/Google'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
 

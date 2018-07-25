@@ -8,18 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		3D49FD57A517D552057D8DC8 /* Pods_OrganizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DE88525F105C403F6F0B6E /* Pods_OrganizApp.framework */; };
+		BB52B1592107DC240036CB3E /* CreateAdminUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB52B1582107DC240036CB3E /* CreateAdminUsernameViewController.swift */; };
+		BB533BA92107AC9600658955 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB533BA82107AC9600658955 /* GoogleService-Info.plist */; };
+		BB533BB32107C55E00658955 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB533BB22107C55E00658955 /* AdminViewController.swift */; };
+		BB533BB82107CFE000658955 /* UpcomingEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB533BB72107CFE000658955 /* UpcomingEventsViewController.swift */; };
+		BB533BBA2107D01100658955 /* AddOrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB533BB92107D01100658955 /* AddOrganizationViewController.swift */; };
+		BB533BC02107D97100658955 /* AdminUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB533BBF2107D97100658955 /* AdminUser.swift */; };
 		BB62E4DB21079EB800209286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB62E4DA21079EB800209286 /* AppDelegate.swift */; };
 		BB62E4DD21079EB800209286 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB62E4DC21079EB800209286 /* HomeViewController.swift */; };
 		BB62E4E021079EB800209286 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB62E4DE21079EB800209286 /* Home.storyboard */; };
 		BB62E4E321079EB800209286 /* OrganizApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB62E4E121079EB800209286 /* OrganizApp.xcdatamodeld */; };
 		BB62E4E521079EB900209286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB62E4E421079EB900209286 /* Assets.xcassets */; };
 		BB62E4E821079EB900209286 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB62E4E621079EB900209286 /* LaunchScreen.storyboard */; };
-		BB62E4FD2107A13E00209286 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB62E4FC2107A13D00209286 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		54FE558E4E9322C50C535245 /* Pods-OrganizApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrganizApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrganizApp/Pods-OrganizApp.release.xcconfig"; sourceTree = "<group>"; };
 		91DE88525F105C403F6F0B6E /* Pods_OrganizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrganizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB52B1582107DC240036CB3E /* CreateAdminUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdminUsernameViewController.swift; sourceTree = "<group>"; };
+		BB533BA82107AC9600658955 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BB533BB22107C55E00658955 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		BB533BB72107CFE000658955 /* UpcomingEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventsViewController.swift; sourceTree = "<group>"; };
+		BB533BB92107D01100658955 /* AddOrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrganizationViewController.swift; sourceTree = "<group>"; };
+		BB533BBF2107D97100658955 /* AdminUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminUser.swift; sourceTree = "<group>"; };
 		BB62E4D721079EB700209286 /* OrganizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrganizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB62E4DA21079EB800209286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB62E4DC21079EB800209286 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -28,7 +39,6 @@
 		BB62E4E421079EB900209286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB62E4E721079EB900209286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB62E4E921079EB900209286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB62E4FC2107A13D00209286 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C4873FD94915F0FEE17AFA0B /* Pods-OrganizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrganizApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrganizApp/Pods-OrganizApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +71,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BB533BB62107CF9E00658955 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB533BBF2107D97100658955 /* AdminUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BB62E4CE21079EB700209286 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +104,7 @@
 				BB62E4F921079F8400209286 /* Views */,
 				BB62E4F721079F7400209286 /* Storyboards */,
 				BB62E4F521079F5E00209286 /* Services */,
-				BB62E4F421079F4400209286 /* Models */,
+				BB533BB62107CF9E00658955 /* Models */,
 				BB62E4F321079F3800209286 /* Helpers */,
 				BB62E4F221079F2800209286 /* Controllers */,
 				BB62E4F121079F1400209286 /* Extensions */,
@@ -100,7 +118,7 @@
 		BB62E4F021079F0D00209286 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				BB62E4FC2107A13D00209286 /* GoogleService-Info.plist */,
+				BB533BA82107AC9600658955 /* GoogleService-Info.plist */,
 				BB62E4E921079EB900209286 /* Info.plist */,
 			);
 			path = Supporting;
@@ -127,14 +145,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		BB62E4F421079F4400209286 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		BB62E4F521079F5E00209286 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +165,10 @@
 			isa = PBXGroup;
 			children = (
 				BB62E4DC21079EB800209286 /* HomeViewController.swift */,
+				BB533BB72107CFE000658955 /* UpcomingEventsViewController.swift */,
+				BB533BB92107D01100658955 /* AddOrganizationViewController.swift */,
+				BB533BB22107C55E00658955 /* AdminViewController.swift */,
+				BB52B1582107DC240036CB3E /* CreateAdminUsernameViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,7 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB62E4E821079EB900209286 /* LaunchScreen.storyboard in Resources */,
-				BB62E4FD2107A13E00209286 /* GoogleService-Info.plist in Resources */,
+				BB533BA92107AC9600658955 /* GoogleService-Info.plist in Resources */,
 				BB62E4E521079EB900209286 /* Assets.xcassets in Resources */,
 				BB62E4E021079EB800209286 /* Home.storyboard in Resources */,
 			);
@@ -297,9 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB533BC02107D97100658955 /* AdminUser.swift in Sources */,
+				BB533BB32107C55E00658955 /* AdminViewController.swift in Sources */,
 				BB62E4DD21079EB800209286 /* HomeViewController.swift in Sources */,
 				BB62E4E321079EB800209286 /* OrganizApp.xcdatamodeld in Sources */,
 				BB62E4DB21079EB800209286 /* AppDelegate.swift in Sources */,
+				BB52B1592107DC240036CB3E /* CreateAdminUsernameViewController.swift in Sources */,
+				BB533BB82107CFE000658955 /* UpcomingEventsViewController.swift in Sources */,
+				BB533BBA2107D01100658955 /* AddOrganizationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
