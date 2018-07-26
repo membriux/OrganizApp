@@ -10,20 +10,12 @@ import UIKit
 
 class AdminViewController: UIViewController {
     
-    
-    
-    @IBOutlet weak var backButton: UIBarButtonItem!
+
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
-    
-    @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
-            
     }
     
     

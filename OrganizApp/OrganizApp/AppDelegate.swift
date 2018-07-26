@@ -11,6 +11,7 @@ import CoreData
 import Firebase
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -22,12 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         // Changing main storyboard
-        let storyboard = UIStoryboard(name: "Home", bundle: .main)
-        
-        if let initialViewController = storyboard.instantiateInitialViewController() {
-            window?.rootViewController = initialViewController
-            window?.makeKeyAndVisible()
-        }
+        let initialViewController = UIStoryboard.initialViewController(for: .home)
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
         
         return true
     }

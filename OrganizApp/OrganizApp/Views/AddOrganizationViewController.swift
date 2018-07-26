@@ -31,8 +31,6 @@ class AddOrganizationViewController: UIViewController {
         
         let authViewController = authUI.authViewController()
         present(authViewController, animated: true)
-        
-        performSegue(withIdentifier: "AdminView", sender: self)
     }
     
     
@@ -41,28 +39,36 @@ class AddOrganizationViewController: UIViewController {
 
 
 extension AddOrganizationViewController: FUIAuthDelegate {
+    
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-        if let error = error {
-            assertionFailure("Error signing in: \(error.localizedDescription)")
-            return
-        }
         
         guard let user = authDataResult?.user
             else { return }
         
-        let userRef = Database.database().reference().child("users").child(user.uid)
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            if let adminUser = AdminUser(snapshot: snapshot) {
-                print("Welcome back, \(adminUser.username).")
+        AdminService.show(forUID: user.uid) { (admin) in
+            if let admin = admin {
+                // handle existing user
+                Admin.setCurrent(admin)
+                
+                let initialViewController = UIStoryboard.initialViewController(for: .admin)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+                
+                
             } else {
-                self.performSegue(withIdentifier: "toCreateAdminUsername", sender: self)
+                // handle new user
+                self.performSegue(withIdentifier: Segue.toCreateAdminUsername, sender: self)
             }
-
-        })
+        }
+        
     }
     
     
-}
+    
+    
+    
+    
 
+}
 
 
