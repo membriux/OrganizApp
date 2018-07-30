@@ -24,16 +24,37 @@ class AddOrganizationViewController: UIViewController {
     
     
     @IBAction func adminButtonTapped(_ sender: Any) {
+        configureViewController(for: self.view.window)
+    }
+    
+    // Checks whether an admin is signed in. If not, they would log in
+    func configureViewController(for window: UIWindow?) {
+
         guard let authUI = FUIAuth.defaultAuthUI()
             else { return }
         
         authUI.delegate = self
         
-        let authViewController = authUI.authViewController()
-        present(authViewController, animated: true)
+        let defaults = UserDefaults.standard
+        let initialViewController: UIViewController
+        
+        // Determine whether there is an admin logged in
+        if let _ = Auth.auth().currentUser,
+            let adminData = defaults.object(forKey: Defaults.currentAdmin) as? Data,
+            let admin = try? JSONDecoder().decode(Admin.self, from: adminData) {
+            
+            Admin.setCurrent(admin, writeToUserDefaults: true)
+            
+            initialViewController = UIStoryboard.initialViewController(for: .admin)
+            self.view.window?.rootViewController = initialViewController
+            self.view.window?.makeKeyAndVisible()
+            
+        } else {
+            let authViewController = authUI.authViewController()
+            present(authViewController, animated: true)
+        }
+        
     }
-    
-    
     
 }
 
@@ -48,7 +69,7 @@ extension AddOrganizationViewController: FUIAuthDelegate {
         AdminService.show(forUID: user.uid) { (admin) in
             if let admin = admin {
                 // handle existing user
-                Admin.setCurrent(admin)
+                Admin.setCurrent(admin, writeToUserDefaults: true)
                 
                 let initialViewController = UIStoryboard.initialViewController(for: .admin)
                 self.view.window?.rootViewController = initialViewController

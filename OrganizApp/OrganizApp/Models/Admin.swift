@@ -8,10 +8,9 @@
 
 import Foundation
 import FirebaseDatabase.FIRDataSnapshot
-
 import Foundation
 
-class Admin {
+class Admin: Codable {
     
     // Singleton
     
@@ -28,24 +27,34 @@ class Admin {
     
     // Class methods
     
-    static func setCurrent(_ admin: Admin) {
+    // Save user to UserDefaults so they don't have to login again
+    static func setCurrent(_ admin: Admin, writeToUserDefaults: Bool = false) {
+    
+        if writeToUserDefaults {
+            if let data = try? JSONEncoder().encode(admin) {
+                UserDefaults.standard.set(data, forKey: Defaults.currentAdmin)
+            }
+        }
         _current = admin
     }
-    
-    
+
     // Properties
     
     let uid: String
     let adminUsername: String
     
+    var managingOrg: String = ""
+    var managingOrgID: String = ""
+    
     
     // init Methods
     
-    init(uid: String, username: String) {
+    init(uid: String, username: String, organization: Organization) {
         self.uid = uid
         self.adminUsername = username
     }
     
+    // Inits by aquiring admin user from the database
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
             let username = dict["username"] as? String

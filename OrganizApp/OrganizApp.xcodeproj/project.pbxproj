@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3D49FD57A517D552057D8DC8 /* Pods_OrganizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DE88525F105C403F6F0B6E /* Pods_OrganizApp.framework */; };
+		BB0C3163210A37AB00293E4A /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C3162210A37AB00293E4A /* PostsTableViewCell.swift */; };
+		BB0C3165210A37B800293E4A /* UpcomingEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C3164210A37B800293E4A /* UpcomingEventsTableViewCell.swift */; };
+		BB0C3167210A8C3400293E4A /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C3166210A8C3400293E4A /* Organization.swift */; };
+		BB0C3169210A940300293E4A /* OrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C3168210A940300293E4A /* OrganizationService.swift */; };
+		BB3086E9210F7C9700B241E5 /* CreateOrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3086E8210F7C9700B241E5 /* CreateOrganizationViewController.swift */; };
+		BB3086EB210FAEFC00B241E5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3086EA210FAEFC00B241E5 /* Post.swift */; };
+		BB3086ED210FAF0C00B241E5 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3086EC210FAF0C00B241E5 /* PostService.swift */; };
+		BB3086EF210FC67100B241E5 /* DateUtilitiy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3086EE210FC67100B241E5 /* DateUtilitiy.swift */; };
 		BB4629892108E4E000CA7FE4 /* AdminService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4629882108E4E000CA7FE4 /* AdminService.swift */; };
 		BB46298C2108EF8900CA7FE4 /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB46298A2108EF8900CA7FE4 /* Admin.storyboard */; };
 		BB46298F210929F200CA7FE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46298E210929F200CA7FE4 /* Constants.swift */; };
@@ -29,6 +37,14 @@
 /* Begin PBXFileReference section */
 		54FE558E4E9322C50C535245 /* Pods-OrganizApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrganizApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrganizApp/Pods-OrganizApp.release.xcconfig"; sourceTree = "<group>"; };
 		91DE88525F105C403F6F0B6E /* Pods_OrganizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrganizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0C3162210A37AB00293E4A /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		BB0C3164210A37B800293E4A /* UpcomingEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventsTableViewCell.swift; sourceTree = "<group>"; };
+		BB0C3166210A8C3400293E4A /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		BB0C3168210A940300293E4A /* OrganizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationService.swift; sourceTree = "<group>"; };
+		BB3086E8210F7C9700B241E5 /* CreateOrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrganizationViewController.swift; sourceTree = "<group>"; };
+		BB3086EA210FAEFC00B241E5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BB3086EC210FAF0C00B241E5 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		BB3086EE210FC67100B241E5 /* DateUtilitiy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilitiy.swift; sourceTree = "<group>"; };
 		BB4629882108E4E000CA7FE4 /* AdminService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminService.swift; sourceTree = "<group>"; };
 		BB46298B2108EF8900CA7FE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Admin.storyboard; sourceTree = "<group>"; };
 		BB46298E210929F200CA7FE4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -91,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				BB533BBF2107D97100658955 /* Admin.swift */,
+				BB0C3166210A8C3400293E4A /* Organization.swift */,
+				BB3086EA210FAEFC00B241E5 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -152,6 +170,12 @@
 		BB62E4F221079F2800209286 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB62E4DC21079EB800209286 /* HomeViewController.swift */,
+				BB533BB72107CFE000658955 /* UpcomingEventsViewController.swift */,
+				BB533BB92107D01100658955 /* AddOrganizationViewController.swift */,
+				BB533BB22107C55E00658955 /* AdminViewController.swift */,
+				BB52B1582107DC240036CB3E /* CreateAdminUsernameViewController.swift */,
+				BB3086E8210F7C9700B241E5 /* CreateOrganizationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -159,6 +183,7 @@
 		BB62E4F321079F3800209286 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BB3086EE210FC67100B241E5 /* DateUtilitiy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -167,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				BB4629882108E4E000CA7FE4 /* AdminService.swift */,
+				BB0C3168210A940300293E4A /* OrganizationService.swift */,
+				BB3086EC210FAF0C00B241E5 /* PostService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -184,11 +211,8 @@
 		BB62E4F921079F8400209286 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BB62E4DC21079EB800209286 /* HomeViewController.swift */,
-				BB533BB72107CFE000658955 /* UpcomingEventsViewController.swift */,
-				BB533BB92107D01100658955 /* AddOrganizationViewController.swift */,
-				BB533BB22107C55E00658955 /* AdminViewController.swift */,
-				BB52B1582107DC240036CB3E /* CreateAdminUsernameViewController.swift */,
+				BB0C3162210A37AB00293E4A /* PostsTableViewCell.swift */,
+				BB0C3164210A37B800293E4A /* UpcomingEventsTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,14 +356,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB0C3169210A940300293E4A /* OrganizationService.swift in Sources */,
 				BB533BC02107D97100658955 /* Admin.swift in Sources */,
 				BB533BB32107C55E00658955 /* AdminViewController.swift in Sources */,
 				BB62E4DD21079EB800209286 /* HomeViewController.swift in Sources */,
+				BB3086EB210FAEFC00B241E5 /* Post.swift in Sources */,
+				BB0C3163210A37AB00293E4A /* PostsTableViewCell.swift in Sources */,
+				BB0C3167210A8C3400293E4A /* Organization.swift in Sources */,
+				BB3086ED210FAF0C00B241E5 /* PostService.swift in Sources */,
 				BB62E4E321079EB800209286 /* OrganizApp.xcdatamodeld in Sources */,
 				BB62E4DB21079EB800209286 /* AppDelegate.swift in Sources */,
 				BB46299121092ADF00CA7FE4 /* Storyboard+Utility.swift in Sources */,
+				BB3086E9210F7C9700B241E5 /* CreateOrganizationViewController.swift in Sources */,
 				BB46298F210929F200CA7FE4 /* Constants.swift in Sources */,
 				BB52B1592107DC240036CB3E /* CreateAdminUsernameViewController.swift in Sources */,
+				BB0C3165210A37B800293E4A /* UpcomingEventsTableViewCell.swift in Sources */,
+				BB3086EF210FC67100B241E5 /* DateUtilitiy.swift in Sources */,
 				BB533BB82107CFE000658955 /* UpcomingEventsViewController.swift in Sources */,
 				BB533BBA2107D01100658955 /* AddOrganizationViewController.swift in Sources */,
 				BB4629892108E4E000CA7FE4 /* AdminService.swift in Sources */,

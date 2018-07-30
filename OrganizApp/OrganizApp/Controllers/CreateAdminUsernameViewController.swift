@@ -27,10 +27,14 @@ class CreateAdminUsernameViewController: UIViewController {
             let username = adminUsernameTextField.text,
             !username.isEmpty else { return }
         
-        AdminService.create(firUser, adminUsername: username) { (admin) in
-            guard let _ = admin else {
+        // Create admin account
+        AdminService.create(firUser, adminUsername: username, managingOrganization: "") { (admin) in
+            guard let admin = admin else {
                 return
             }
+            
+            
+            Admin.setCurrent(admin, writeToUserDefaults: true)
             
             // Go to admin page storyboard
             let initialViewController = UIStoryboard.initialViewController(for: .admin)

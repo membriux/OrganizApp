@@ -13,9 +13,24 @@ import Foundation
 struct Segue {
     
     static let toCreateAdminUsername = "toCreateAdminUsername"
-    
+    static let toCreateOrganization = "toCreateOrganization"
     
 }
+
+struct Cells {
+    
+    static let PostsTableViewCell = "PostsTableViewCell"
+    static let UpcomingEventsTableViewCell = "UpcomingEventsTableViewCell"
+    
+}
+
+struct Defaults {
+    
+    static let currentAdmin = "currentAdmin"
+    static let currentOrg = "currentOrg"
+    
+}
+
 
 
 

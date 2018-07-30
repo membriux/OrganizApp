@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-
+        
         // Changing main storyboard
         let initialViewController = UIStoryboard.initialViewController(for: .home)
         window?.rootViewController = initialViewController
@@ -100,4 +100,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
