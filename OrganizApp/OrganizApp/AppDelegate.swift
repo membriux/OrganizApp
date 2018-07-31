@@ -98,6 +98,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    // Checks if it's the first time launching the app
+    func launchedBefore() {
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if !launchedBefore  {
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            createUserDefaultsArray()
+        }
+    }
+    
+    
+    // Creates empty array that will be used for storing the organizations that the user saves
+    func createUserDefaultsArray() {
+        let orgs: [String] = []
+        UD.defaults.set(orgs, forKey: "organizations")
+    }
 
 }
 

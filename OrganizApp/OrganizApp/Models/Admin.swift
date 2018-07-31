@@ -57,11 +57,15 @@ class Admin: Codable {
     // Inits by aquiring admin user from the database
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
-            let username = dict["username"] as? String
+            let username = dict["username"] as? String,
+            let managingOrg = dict["managingOrganization"] as? String,
+            let managingOrgId = dict["managingOrganizationID"] as? String
             else { return nil }
         
         self.uid = snapshot.key
         self.adminUsername = username
+        self.managingOrg = managingOrg
+        self.managingOrgID = managingOrgId
     }
     
 }

@@ -31,6 +31,12 @@ struct Defaults {
     
 }
 
+struct UD {
+    
+    static let defaults = UserDefaults.standard
+    static var orgs = defaults.stringArray(forKey: "organizations") ?? []
+
+}
 
 
 

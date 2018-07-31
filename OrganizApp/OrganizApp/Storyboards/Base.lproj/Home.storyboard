@@ -194,14 +194,17 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="z1C-3m-O20"/>
                                         </constraints>
                                         <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="0iG-9F-pcJ" eventType="touchUpInside" id="9vl-E5-K33"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Xi-AA-gGP">
-                                <rect key="frame" x="0.0" y="130" width="375" height="488"/>
+                                <rect key="frame" x="0.0" y="143" width="375" height="475"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="58" id="fqm-zt-4dL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrganizationsTableCell" rowHeight="58" id="fqm-zt-4dL" customClass="OrganizationsTableCell" customModule="OrganizApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fqm-zt-4dL" id="ciC-wT-8AF">
@@ -221,22 +224,38 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="T1h-Uk-wtd" secondAttribute="trailing" constant="16" id="kfi-gi-nlW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="organizationNameLabel" destination="T1h-Uk-wtd" id="sf3-k8-ZPf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0iG-9F-pcJ" id="xfi-9j-lIc"/>
+                                    <outlet property="delegate" destination="0iG-9F-pcJ" id="Da7-UZ-jBN"/>
+                                </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFf-33-tJX">
+                                <rect key="frame" x="0.0" y="118" width="375" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.18923043079999999" blue="0.16984217109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3Xi-AA-gGP" firstAttribute="trailing" secondItem="2CB-SH-IEY" secondAttribute="trailing" id="4uQ-US-vu8"/>
+                            <constraint firstItem="3Xi-AA-gGP" firstAttribute="top" secondItem="FFf-33-tJX" secondAttribute="bottom" constant="8" id="2P7-iq-Ihl"/>
+                            <constraint firstItem="FFf-33-tJX" firstAttribute="leading" secondItem="2CB-SH-IEY" secondAttribute="leading" id="8AI-VH-ef7"/>
                             <constraint firstItem="2CB-SH-IEY" firstAttribute="top" secondItem="sFy-om-N2d" secondAttribute="bottom" constant="-44" id="Bc2-cJ-TRA"/>
+                            <constraint firstItem="FFf-33-tJX" firstAttribute="top" secondItem="wbv-PN-yf9" secondAttribute="bottom" constant="4" id="ELw-OB-dvN"/>
+                            <constraint firstItem="2CB-SH-IEY" firstAttribute="trailing" secondItem="FFf-33-tJX" secondAttribute="trailing" id="EXE-wQ-OnJ"/>
                             <constraint firstItem="wbv-PN-yf9" firstAttribute="top" secondItem="sFy-om-N2d" secondAttribute="bottom" constant="16" id="Fnd-Sk-DE5"/>
-                            <constraint firstItem="3Xi-AA-gGP" firstAttribute="top" secondItem="wbv-PN-yf9" secondAttribute="bottom" constant="16" id="NDx-gi-Ui0"/>
+                            <constraint firstItem="3Xi-AA-gGP" firstAttribute="leading" secondItem="2CB-SH-IEY" secondAttribute="leading" id="HbE-Df-Qxk"/>
+                            <constraint firstItem="3Xi-AA-gGP" firstAttribute="trailing" secondItem="2CB-SH-IEY" secondAttribute="trailing" id="POX-p5-YFs"/>
                             <constraint firstItem="sFy-om-N2d" firstAttribute="leading" secondItem="2CB-SH-IEY" secondAttribute="leading" id="UfO-TB-Ekh"/>
                             <constraint firstItem="sFy-om-N2d" firstAttribute="top" secondItem="2CB-SH-IEY" secondAttribute="top" id="YaG-zq-V6W"/>
                             <constraint firstItem="2CB-SH-IEY" firstAttribute="trailing" secondItem="wbv-PN-yf9" secondAttribute="trailing" constant="16" id="dyN-Sb-qUa"/>
-                            <constraint firstItem="3Xi-AA-gGP" firstAttribute="leading" secondItem="2CB-SH-IEY" secondAttribute="leading" id="gHh-YB-TWu"/>
-                            <constraint firstItem="3Xi-AA-gGP" firstAttribute="bottom" secondItem="2CB-SH-IEY" secondAttribute="bottom" id="rl6-ow-i1y"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="3Xi-AA-gGP" secondAttribute="bottom" id="qJf-kz-XOd"/>
                             <constraint firstItem="wbv-PN-yf9" firstAttribute="leading" secondItem="2CB-SH-IEY" secondAttribute="leading" constant="16" id="uRB-pS-KLL"/>
                             <constraint firstItem="sFy-om-N2d" firstAttribute="trailing" secondItem="2CB-SH-IEY" secondAttribute="trailing" id="ysm-sY-guC"/>
                         </constraints>
@@ -244,7 +263,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="Add" image="tab_plus_black" selectedImage="tab_plus_black" id="kN1-Sv-idX"/>
                     <connections>
+                        <outlet property="addButton" destination="kSg-lb-bW3" id="QwF-0y-Hbh"/>
+                        <outlet property="addInputTextField" destination="Fe8-Ay-lUt" id="Wbf-nY-afz"/>
                         <outlet property="adminButton" destination="fC3-FS-5Vq" id="va7-Vo-qpl"/>
+                        <outlet property="notFoundErrorLabel" destination="FFf-33-tJX" id="TZi-nC-gpS"/>
+                        <outlet property="organizationsTable" destination="3Xi-AA-gGP" id="Ujs-zf-YkA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGd-C1-cfa" userLabel="First Responder" sceneMemberID="firstResponder"/>

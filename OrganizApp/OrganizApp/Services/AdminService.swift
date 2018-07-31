@@ -19,6 +19,7 @@ struct AdminService {
         let newAdminAttrs = ["username": admin.adminUsername,
                              "managingOrganizationID": organizationUID,
                              "managingOrganization": organization]
+        
         ref.setValue(newAdminAttrs) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
@@ -34,17 +35,15 @@ struct AdminService {
             guard let admin = Admin(snapshot: snapshot) else {
                 return completion(nil)
             }
-            
             completion(admin)
         })
     }
     
     
-    static func create(_ firUser: User, adminUsername: String, managingOrganization: String, completion: @escaping (Admin?) -> Void) {
+    static func create(_ firUser: User, adminUsername: String, completion: @escaping (Admin?) -> Void) {
         
         // Create dict to store adminUsernames
-        let userAttrs = ["username": adminUsername,
-                         "managingOrganizationID": managingOrganization]
+        let userAttrs = ["username": adminUsername]
         
         // Specify path of the database
         let ref = Database.database().reference().child("admins").child(firUser.uid)

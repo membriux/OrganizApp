@@ -12,6 +12,7 @@
 		BB0C3165210A37B800293E4A /* UpcomingEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C3164210A37B800293E4A /* UpcomingEventsTableViewCell.swift */; };
 		BB0C3167210A8C3400293E4A /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C3166210A8C3400293E4A /* Organization.swift */; };
 		BB0C3169210A940300293E4A /* OrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C3168210A940300293E4A /* OrganizationService.swift */; };
+		BB2098572110D1F900954499 /* OrganizationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2098562110D1F900954499 /* OrganizationsTableViewCell.swift */; };
 		BB3086E9210F7C9700B241E5 /* CreateOrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3086E8210F7C9700B241E5 /* CreateOrganizationViewController.swift */; };
 		BB3086EB210FAEFC00B241E5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3086EA210FAEFC00B241E5 /* Post.swift */; };
 		BB3086ED210FAF0C00B241E5 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3086EC210FAF0C00B241E5 /* PostService.swift */; };
@@ -41,6 +42,7 @@
 		BB0C3164210A37B800293E4A /* UpcomingEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventsTableViewCell.swift; sourceTree = "<group>"; };
 		BB0C3166210A8C3400293E4A /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		BB0C3168210A940300293E4A /* OrganizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationService.swift; sourceTree = "<group>"; };
+		BB2098562110D1F900954499 /* OrganizationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsTableViewCell.swift; sourceTree = "<group>"; };
 		BB3086E8210F7C9700B241E5 /* CreateOrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrganizationViewController.swift; sourceTree = "<group>"; };
 		BB3086EA210FAEFC00B241E5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BB3086EC210FAF0C00B241E5 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				BB0C3162210A37AB00293E4A /* PostsTableViewCell.swift */,
 				BB0C3164210A37B800293E4A /* UpcomingEventsTableViewCell.swift */,
+				BB2098562110D1F900954499 /* OrganizationsTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2098572110D1F900954499 /* OrganizationsTableViewCell.swift in Sources */,
 				BB0C3169210A940300293E4A /* OrganizationService.swift in Sources */,
 				BB533BC02107D97100658955 /* Admin.swift in Sources */,
 				BB533BB32107C55E00658955 /* AdminViewController.swift in Sources */,

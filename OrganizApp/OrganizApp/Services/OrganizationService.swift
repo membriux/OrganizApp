@@ -11,6 +11,27 @@ import FirebaseAuth.FIRUser
 import FirebaseDatabase
 
 struct OrganizationService {
+
+    
+    static func find(targetOrg: String, completion: @escaping ([Organization]) -> Void) {
+
+        
+        let ref = Database.database().reference().child("organizations")
+        
+        // Returns all the organizations from the database
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
+                else { return completion([]) }
+            
+            // Searches the organization that the user wants to add
+            let organizationMatch = snapshot.compactMap(Organization.init).filter { $0.organizationUsername.lowercased() == targetOrg.lowercased() }
+        
+            completion(organizationMatch)
+            
+        })
+    }
+    
+    
     
 //    // Returns the organization that the admin is modifying
 //    static func organizations(for admin: Admin, completion: @escaping (Organization?) -> Void) {

@@ -49,5 +49,4 @@ extension UpcomingEventsViewController: UITableViewDataSource, UITableViewDelega
         
         return cell
     }
-    
 }

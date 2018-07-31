@@ -28,7 +28,7 @@ class CreateAdminUsernameViewController: UIViewController {
             !username.isEmpty else { return }
         
         // Create admin account
-        AdminService.create(firUser, adminUsername: username, managingOrganization: "") { (admin) in
+        AdminService.create(firUser, adminUsername: username) { (admin) in
             guard let admin = admin else {
                 return
             }

@@ -28,14 +28,20 @@ class Organization: Codable {
 //        return currentOrg
 //    }
 //    
-//    // Save organization to UserDefaults
-//    static func setCurrent(_ organization: Organization, writeToUserDefaults: Bool = false) {
-//        if writeToUserDefaults {
-//            if let data = try? JSONEncoder().encode(organization) {
-//                UserDefaults.standard.set(data, forKey: Defaults.currentOrg)
-//            }
-//        }
-//    }
+    // Save organization to UserDefaults
+    static func save(_ organizationUsername: String) {
+        var orgs = UD.orgs
+        orgs.append(organizationUsername)
+        
+        UD.defaults.set(orgs, forKey: "organizations")
+    }
+    
+    static func get() -> [Any?] {
+        if let name = UserDefaults.standard.array(forKey: "organizations") {
+            print(name)
+        }
+        return []
+    }
 
     
     
