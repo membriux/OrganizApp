@@ -38,6 +38,7 @@ struct PostService {
             }
             
             let posts = snapshot.reversed().compactMap(Post.init)
+            
             completion(posts)
         })
     }

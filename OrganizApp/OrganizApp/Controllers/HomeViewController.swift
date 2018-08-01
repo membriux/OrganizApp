@@ -9,13 +9,33 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    var posts = [Post]()
 
     @IBOutlet weak var aboutButton: UIBarButtonItem!
     @IBOutlet weak var postTable: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureViewController()
+    }
     
+    func configureViewController() {
+        if Home.currentOrgId != "" {
+            // change title
+            getPosts()
+        }
+    }
+    
+    func getPosts() {
+        OrganizationService.show(forUID: Home.currentOrgId) { (organization) in
+            guard let organization = organization else { return }
+            PostService.posts(for: organization) { (posts) in
+//                print("Obtaining posts from:", organization.organizationUsername, "with uid:", organization.uid)
+                self.posts = posts
+                self.postTable.reloadData()
+            }
+        }
     }
     
     
@@ -23,21 +43,26 @@ class HomeViewController: UIViewController {
         // Show about page
     }
     
+  
 
+    
+    
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostsTableCell", for: indexPath) as! PostsTableCell
         
-        cell.postSubjectLabel.text = "Post Subject"
-        cell.postDateLabel.text = "July 26, 2018"
-        cell.postTextLabel.text = "Prepare for this to be finished soon. I hope that this subject line passes on to the next and doesn't mess up with the size of the table cell."
+        let post = posts[indexPath.row]
+        
+        cell.postSubjectLabel.text = post.subject
+        cell.postDateLabel.text = post.creationDate
+        cell.postTextLabel.text = post.content
         
         return cell
     }

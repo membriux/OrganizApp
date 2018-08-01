@@ -33,6 +33,7 @@
 		BB62E4E321079EB800209286 /* OrganizApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB62E4E121079EB800209286 /* OrganizApp.xcdatamodeld */; };
 		BB62E4E521079EB900209286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB62E4E421079EB900209286 /* Assets.xcassets */; };
 		BB62E4E821079EB900209286 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB62E4E621079EB900209286 /* LaunchScreen.storyboard */; };
+		BBE0F3C321122D2A00BD17AD /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE0F3C221122D2A00BD17AD /* CalendarService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		BB62E4E421079EB900209286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB62E4E721079EB900209286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB62E4E921079EB900209286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBE0F3C221122D2A00BD17AD /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		C4873FD94915F0FEE17AFA0B /* Pods-OrganizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrganizApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrganizApp/Pods-OrganizApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +198,7 @@
 				BB4629882108E4E000CA7FE4 /* AdminService.swift */,
 				BB0C3168210A940300293E4A /* OrganizationService.swift */,
 				BB3086EC210FAF0C00B241E5 /* PostService.swift */,
+				BBE0F3C221122D2A00BD17AD /* CalendarService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				BB3086EF210FC67100B241E5 /* DateUtilitiy.swift in Sources */,
 				BB533BB82107CFE000658955 /* UpcomingEventsViewController.swift in Sources */,
 				BB533BBA2107D01100658955 /* AddOrganizationViewController.swift in Sources */,
+				BBE0F3C321122D2A00BD17AD /* CalendarService.swift in Sources */,
 				BB4629892108E4E000CA7FE4 /* AdminService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

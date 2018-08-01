@@ -13,36 +13,18 @@ import Foundation
 
 class Organization: Codable {
     
-    // Singleton
-    
-//    private static var _current: Organization?
-//    
-//    
-//    static var current: Organization {
-//        
-//        guard let currentOrg = _current else {
-//            fatalError("Error: current org doesn't exist")
-//        }
-//        
-//        
-//        return currentOrg
-//    }
-//    
-    // Save organization to UserDefaults
-    static func save(_ organizationUsername: String) {
-        var orgs = UD.orgs
-        orgs.append(organizationUsername)
-        
-        UD.defaults.set(orgs, forKey: "organizations")
-    }
-    
-    static func get() -> [Any?] {
-        if let name = UserDefaults.standard.array(forKey: "organizations") {
-            print(name)
-        }
-        return []
-    }
 
+    // Save organization to UserDefaults
+    static func save(_ organizationUsername: String,_ organizationUID: String) {
+        // Modify user defaults' array and dict
+        UD.orgsDict[organizationUsername] = organizationUID
+        UD.orgsArray.append(organizationUsername)
+        
+        // Save changes made to user defaults
+        UD.defaults.set(UD.orgsDict, forKey: UD.organizationsDict )
+        UD.defaults.set(UD.orgsArray, forKey: UD.organizationsArray)
+        
+    }
     
     
     // Properties
@@ -56,7 +38,6 @@ class Organization: Codable {
     var city: String = ""
     var state: String = ""
     var zip: String = ""
-    
     
     // init Methods
     

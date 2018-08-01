@@ -63,7 +63,6 @@ class AdminViewController: UIViewController {
     }
     
     
-    
     @IBAction func changeButtonTapped(_ sender: UIButton) {
         // Updates email used for the calendar
     }
@@ -84,7 +83,5 @@ class AdminViewController: UIViewController {
         self.postButton.backgroundColor = UIColor.lightGray
         self.postButton.setTitle("Done!", for: .normal)
     }
-    
-    
     
 }

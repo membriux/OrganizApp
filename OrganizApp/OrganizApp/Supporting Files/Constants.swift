@@ -8,6 +8,7 @@
 
 
 import Foundation
+import UIKit
 
 
 struct Segue {
@@ -34,9 +35,28 @@ struct Defaults {
 struct UD {
     
     static let defaults = UserDefaults.standard
-    static var orgs = defaults.stringArray(forKey: "organizations") ?? []
-
+    static let organizationsArray = "organizationsArray"
+    static let organizationsDict = "organizationsDict"
+    
+    static var orgsDict = defaults.dictionary(forKey: "organizationsDict") ?? [:]
+    static var orgsArray = defaults.stringArray(forKey: "organizationsArray") ?? []
+    
 }
+
+struct Home {
+    
+    static var currentOrgId =  ""
+    static var currentOrgName = ""
+    
+}
+
+
+
+
+
+
+
+
 
 
 

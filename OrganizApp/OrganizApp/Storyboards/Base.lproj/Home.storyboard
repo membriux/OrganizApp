@@ -182,16 +182,16 @@
                                 <rect key="frame" x="16" y="80" width="343" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Organization" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-Ay-lUt">
-                                        <rect key="frame" x="0.0" y="0.0" width="263" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="247" height="34"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSg-lb-bW3">
-                                        <rect key="frame" x="279" y="0.0" width="64" height="34"/>
+                                        <rect key="frame" x="263" y="0.0" width="80" height="34"/>
                                         <color key="backgroundColor" red="0.25882352939999997" green="0.57254901960000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="z1C-3m-O20"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="z1C-3m-O20"/>
                                         </constraints>
                                         <state key="normal" title="Add"/>
                                         <connections>
@@ -200,19 +200,20 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Xi-AA-gGP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Xi-AA-gGP">
                                 <rect key="frame" x="0.0" y="143" width="375" height="475"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrganizationsTableCell" rowHeight="58" id="fqm-zt-4dL" customClass="OrganizationsTableCell" customModule="OrganizApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="58"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrganizationsTableCell" rowHeight="64" id="fqm-zt-4dL" customClass="OrganizationsTableCell" customModule="OrganizApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fqm-zt-4dL" id="ciC-wT-8AF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1h-Uk-wtd">
-                                                    <rect key="frame" x="31" y="18.5" width="313" height="21"/>
+                                                    <rect key="frame" x="31" y="21.5" width="313" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -237,7 +238,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFf-33-tJX">
                                 <rect key="frame" x="0.0" y="118" width="375" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.95686274510000002" green="0.18923043079999999" blue="0.16984217109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -266,8 +267,8 @@
                         <outlet property="addButton" destination="kSg-lb-bW3" id="QwF-0y-Hbh"/>
                         <outlet property="addInputTextField" destination="Fe8-Ay-lUt" id="Wbf-nY-afz"/>
                         <outlet property="adminButton" destination="fC3-FS-5Vq" id="va7-Vo-qpl"/>
-                        <outlet property="notFoundErrorLabel" destination="FFf-33-tJX" id="TZi-nC-gpS"/>
                         <outlet property="organizationsTable" destination="3Xi-AA-gGP" id="Ujs-zf-YkA"/>
+                        <outlet property="status" destination="FFf-33-tJX" id="Kpb-5z-YNQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGd-C1-cfa" userLabel="First Responder" sceneMemberID="firstResponder"/>

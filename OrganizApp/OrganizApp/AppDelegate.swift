@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
-        
+        launchedBefore()
         
         // Changing main storyboard
         let initialViewController = UIStoryboard.initialViewController(for: .home)
@@ -111,8 +111,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Creates empty array that will be used for storing the organizations that the user saves
     func createUserDefaultsArray() {
-        let orgs: [String] = []
-        UD.defaults.set(orgs, forKey: "organizations")
+        let orgDict: [String:String] = [:]
+        let orgArray: [String] = []
+        UD.defaults.set(orgDict, forKey: "organizationsDict")
+        UD.defaults.set(orgArray, forKey: "organizationsArray")
     }
 
 }

@@ -41,7 +41,7 @@ class Post: Codable {
     // Inits by aquiring admin user from the database
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
-            let creationDate = dict["created_at"] as? String,
+            let creationDate = dict["creationDate"] as? String,
             let subject = dict["subject"] as? String,
             let content = dict["content"] as? String
             else { return nil }
