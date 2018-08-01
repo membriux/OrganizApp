@@ -12,6 +12,7 @@
 		BB0C3165210A37B800293E4A /* UpcomingEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C3164210A37B800293E4A /* UpcomingEventsTableViewCell.swift */; };
 		BB0C3167210A8C3400293E4A /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C3166210A8C3400293E4A /* Organization.swift */; };
 		BB0C3169210A940300293E4A /* OrganizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0C3168210A940300293E4A /* OrganizationService.swift */; };
+		BB0CFA102112690D006B3E08 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0CFA0F2112690D006B3E08 /* CreateEventViewController.swift */; };
 		BB2098572110D1F900954499 /* OrganizationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2098562110D1F900954499 /* OrganizationsTableViewCell.swift */; };
 		BB3086E9210F7C9700B241E5 /* CreateOrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3086E8210F7C9700B241E5 /* CreateOrganizationViewController.swift */; };
 		BB3086EB210FAEFC00B241E5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3086EA210FAEFC00B241E5 /* Post.swift */; };
@@ -43,6 +44,7 @@
 		BB0C3164210A37B800293E4A /* UpcomingEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventsTableViewCell.swift; sourceTree = "<group>"; };
 		BB0C3166210A8C3400293E4A /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		BB0C3168210A940300293E4A /* OrganizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationService.swift; sourceTree = "<group>"; };
+		BB0CFA0F2112690D006B3E08 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		BB2098562110D1F900954499 /* OrganizationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsTableViewCell.swift; sourceTree = "<group>"; };
 		BB3086E8210F7C9700B241E5 /* CreateOrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrganizationViewController.swift; sourceTree = "<group>"; };
 		BB3086EA210FAEFC00B241E5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				BB533BB22107C55E00658955 /* AdminViewController.swift */,
 				BB52B1582107DC240036CB3E /* CreateAdminUsernameViewController.swift */,
 				BB3086E8210F7C9700B241E5 /* CreateOrganizationViewController.swift */,
+				BB0CFA0F2112690D006B3E08 /* CreateEventViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				BB62E4DD21079EB800209286 /* HomeViewController.swift in Sources */,
 				BB3086EB210FAEFC00B241E5 /* Post.swift in Sources */,
 				BB0C3163210A37AB00293E4A /* PostsTableViewCell.swift in Sources */,
+				BB0CFA102112690D006B3E08 /* CreateEventViewController.swift in Sources */,
 				BB0C3167210A8C3400293E4A /* Organization.swift in Sources */,
 				BB3086ED210FAF0C00B241E5 /* PostService.swift in Sources */,
 				BB62E4E321079EB800209286 /* OrganizApp.xcdatamodeld in Sources */,

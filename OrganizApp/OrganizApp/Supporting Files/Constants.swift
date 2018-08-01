@@ -15,6 +15,7 @@ struct Segue {
     
     static let toCreateAdminUsername = "toCreateAdminUsername"
     static let toCreateOrganization = "toCreateOrganization"
+    static let toCreateEvent = "toCreateEvent"
     
 }
 

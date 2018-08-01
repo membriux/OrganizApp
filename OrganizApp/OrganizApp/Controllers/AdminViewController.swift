@@ -12,16 +12,13 @@ class AdminViewController: UIViewController {
     
     let admin = Admin.current
     
+    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var organizationNameLabel: UILabel!
+    @IBOutlet weak var adminTitleLabel: UINavigationItem!
     @IBOutlet weak var subjectTextField: UITextField!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var postContent: UITextView!
-    @IBOutlet weak var calendarEmailTextField: UITextField!
-    @IBOutlet weak var changeButton: UIButton!
-    @IBOutlet weak var calendarEmailLabel: UILabel!
-    @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet var createButton: UIView!
-    @IBOutlet weak var adminTitleLabel: UINavigationItem!
+    @IBOutlet weak var createEventButton: UIButton!
     @IBOutlet weak var createOrganizationButton: UIButton!
     
     
@@ -63,16 +60,18 @@ class AdminViewController: UIViewController {
     }
     
     
-    @IBAction func changeButtonTapped(_ sender: UIButton) {
+    @IBAction func createEventButtonTapped(_ sender: UIButton) {
         // Updates email used for the calendar
+        performSegue(withIdentifier: Segue.toCreateEvent, sender: self)
     }
     
-    
     func configureViewController() {
-        self.adminTitleLabel.title = "Admin: " + admin.adminUsername
+        self.adminTitleLabel.title = "Welcome back " + admin.adminUsername + "!"
         if admin.managingOrg != "" {
             createOrganizationButton.isHidden = true
             self.organizationNameLabel.text = "Organization: " + admin.managingOrg
+        } else {
+            createEventButton.isHidden = true
         }
     }
     
