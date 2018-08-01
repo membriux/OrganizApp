@@ -166,7 +166,7 @@ extension AddOrganizationViewController: FUIAuthDelegate {
         AdminService.show(forUID: user.uid) { (admin) in
             if let admin = admin {
                 // handle existing user
-                
+            
                 Admin.setCurrent(admin, writeToUserDefaults: true)
                 
                 let initialViewController = UIStoryboard.initialViewController(for: .admin)

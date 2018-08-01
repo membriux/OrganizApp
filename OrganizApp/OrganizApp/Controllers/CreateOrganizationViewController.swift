@@ -13,7 +13,6 @@ class CreateOrganizationViewController: UIViewController {
     
     @IBOutlet weak var orgUsernameTextField: UITextField!
     @IBOutlet weak var contactEmailTextField: UITextField!
-    @IBOutlet weak var calendarEmailTextField: UITextField!
     @IBOutlet weak var streetTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var stateTextField: UITextField!
@@ -35,15 +34,14 @@ class CreateOrganizationViewController: UIViewController {
         let admin = Admin.current
         guard let organizationUsername = orgUsernameTextField.text,
             let contactEmail = contactEmailTextField.text,
-            let calendarEmail = calendarEmailTextField.text,
             let street = streetTextField.text,
             let city = cityTextField.text,
             let state = stateTextField.text,
             let zip = zipTextField.text,
-            !organizationUsername.isEmpty && !contactEmail.isEmpty && !calendarEmail.isEmpty && !street.isEmpty && !city.isEmpty && !state.isEmpty && !zip.isEmpty else { show(error: error); return }
+            !organizationUsername.isEmpty && !contactEmail.isEmpty && !street.isEmpty && !city.isEmpty && !state.isEmpty && !zip.isEmpty else { show(error: error); return }
         
         
-        OrganizationService.create(organizationUsername: organizationUsername, email: contactEmail, calendarEmail: calendarEmail, street: street, city: city, state: state, zip: zip ) { (organization) in
+        OrganizationService.create(organizationUsername: organizationUsername, email: contactEmail, street: street, city: city, state: state, zip: zip ) { (organization) in
             guard let organization = organization else {
                 return
             }

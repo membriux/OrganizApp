@@ -43,7 +43,9 @@ struct AdminService {
     static func create(_ firUser: User, adminUsername: String, completion: @escaping (Admin?) -> Void) {
         
         // Create dict to store adminUsernames
-        let userAttrs = ["username": adminUsername]
+        let userAttrs = ["username": adminUsername,
+                         "managingOrganization": "",
+                         "managingOrganizationID": ""]
         
         // Specify path of the database
         let ref = Database.database().reference().child("admins").child(firUser.uid)

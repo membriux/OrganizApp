@@ -33,7 +33,6 @@ class Organization: Codable {
     let organizationUsername: String
     
     var email: String = ""
-    var calendarEmail: String = ""
     var street: String = ""
     var city: String = ""
     var state: String = ""
@@ -50,7 +49,6 @@ class Organization: Codable {
         guard let dict = snapshot.value as? [String : Any],
             let organizationUsername = dict["organizationUsername"] as? String,
             let email = dict["email"] as? String,
-            let calendarEmail = dict["calendarEmail"] as? String,
             let street = dict["street"] as? String,
             let city = dict["city"] as? String,
             let state = dict["state"] as? String,
@@ -60,7 +58,6 @@ class Organization: Codable {
         self.uid = snapshot.key
         self.organizationUsername = organizationUsername
         self.email = email
-        self.calendarEmail = calendarEmail
         self.street = street
         self.city = city
         self.state = state

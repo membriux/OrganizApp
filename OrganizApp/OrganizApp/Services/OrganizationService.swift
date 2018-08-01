@@ -60,18 +60,16 @@ struct OrganizationService {
     }
     
     // Create organization and save it to the database
-    static func create(organizationUsername: String, email: String, calendarEmail: String, street: String, city: String, state: String, zip: String, completion: @escaping (Organization?) -> Void) {
+    static func create(organizationUsername: String, email: String, street: String, city: String, state: String, zip: String, completion: @escaping (Organization?) -> Void) {
         
         // Create dict to store adminUsernames
         
         let organizationAttrs = ["organizationUsername": organizationUsername,
                                  "email": email,
-                                 "calendarEmail": calendarEmail,
                                  "street": street,
                                  "city": city,
                                  "state": state,
-                                 "zip": zip
-                                ]
+                                 "zip": zip]
         
         // Specify path of the database and create unique id
         let organizationRef = Database.database().reference().child("organizations").childByAutoId()

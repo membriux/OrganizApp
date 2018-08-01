@@ -69,26 +69,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ksh-ia-wYq">
-                                <rect key="frame" x="16" y="404.5" width="288" height="36"/>
+                                <rect key="frame" x="16" y="404.5" width="288" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: calendar@gmail.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fbo-OZ-dR1">
-                                        <rect key="frame" x="0.0" y="0.0" width="208" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="3Ti-X3-UEe"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ik8-c7-8sh">
-                                        <rect key="frame" x="224" y="0.0" width="64" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
                                         <color key="backgroundColor" red="0.5291578758208122" green="0.19894714997703059" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="EvU-vQ-ZUz"/>
-                                            <constraint firstAttribute="height" constant="36" id="Ikv-7j-8sH"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="d7B-6q-d8E"/>
                                         </constraints>
-                                        <state key="normal" title="Change">
+                                        <state key="normal" title="Create Event">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -112,25 +102,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzg-3Y-ZMq">
-                                <rect key="frame" x="16" y="448.5" width="288" height="14.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Calendar email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bb-qN-Rff">
-                                        <rect key="frame" x="0.0" y="0.0" width="91" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.4039215686" green="0.39607843139999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59z-q3-554">
-                                        <rect key="frame" x="91" y="0.0" width="197" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.4039215686" green="0.39607843139999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86M-sK-LMq">
-                                <rect key="frame" x="16" y="479" width="288" height="40"/>
+                                <rect key="frame" x="16" y="460.5" width="288" height="40"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.44010568972691622" blue="0.1590437297472504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="iWT-KT-nP5"/>
@@ -153,24 +126,22 @@
                             <constraint firstItem="dUD-f0-8MC" firstAttribute="trailing" secondItem="wdh-TY-d0A" secondAttribute="trailing" constant="16" id="9Ct-69-KUl"/>
                             <constraint firstItem="4KK-i8-6Og" firstAttribute="top" secondItem="yFB-ud-xJ2" secondAttribute="bottom" constant="16" id="CPa-tM-pxN"/>
                             <constraint firstItem="dUD-f0-8MC" firstAttribute="trailing" secondItem="86M-sK-LMq" secondAttribute="trailing" constant="16" id="FlH-e6-1Ws"/>
-                            <constraint firstItem="wzg-3Y-ZMq" firstAttribute="top" secondItem="Ksh-ia-wYq" secondAttribute="bottom" constant="8" id="OsF-na-Dhc"/>
                             <constraint firstItem="yFB-ud-xJ2" firstAttribute="trailing" secondItem="dUD-f0-8MC" secondAttribute="trailing" id="Rjl-xg-hmw"/>
                             <constraint firstItem="dUD-f0-8MC" firstAttribute="trailing" secondItem="bII-gO-4cy" secondAttribute="trailing" constant="16" id="S2G-MH-Gog"/>
                             <constraint firstItem="J1y-rV-7J4" firstAttribute="leading" secondItem="dUD-f0-8MC" secondAttribute="leading" constant="16" id="STb-8w-Biz"/>
                             <constraint firstItem="wdh-TY-d0A" firstAttribute="top" secondItem="bII-gO-4cy" secondAttribute="bottom" constant="8" id="Yb6-iZ-mEv"/>
-                            <constraint firstItem="wzg-3Y-ZMq" firstAttribute="leading" secondItem="dUD-f0-8MC" secondAttribute="leading" constant="16" id="Z6R-b5-Odn"/>
-                            <constraint firstItem="dUD-f0-8MC" firstAttribute="trailing" secondItem="wzg-3Y-ZMq" secondAttribute="trailing" constant="16" id="bEO-GF-6at"/>
                             <constraint firstItem="Ksh-ia-wYq" firstAttribute="top" secondItem="J1y-rV-7J4" secondAttribute="bottom" constant="16" id="fKf-iN-LEf"/>
+                            <constraint firstItem="86M-sK-LMq" firstAttribute="height" secondItem="Ksh-ia-wYq" secondAttribute="height" id="fVk-fv-eSx"/>
                             <constraint firstItem="Ksh-ia-wYq" firstAttribute="leading" secondItem="dUD-f0-8MC" secondAttribute="leading" constant="16" id="grZ-gE-gVO"/>
                             <constraint firstItem="dUD-f0-8MC" firstAttribute="trailing" secondItem="Ksh-ia-wYq" secondAttribute="trailing" constant="16" id="hNJ-ZM-XGa"/>
                             <constraint firstItem="bII-gO-4cy" firstAttribute="leading" secondItem="dUD-f0-8MC" secondAttribute="leading" constant="16" id="i9Y-LT-z2V"/>
+                            <constraint firstItem="86M-sK-LMq" firstAttribute="top" secondItem="Ksh-ia-wYq" secondAttribute="bottom" constant="16" id="isB-E2-vsd"/>
                             <constraint firstItem="4KK-i8-6Og" firstAttribute="leading" secondItem="dUD-f0-8MC" secondAttribute="leading" constant="32" id="kFt-do-v29"/>
                             <constraint firstItem="yFB-ud-xJ2" firstAttribute="top" secondItem="dUD-f0-8MC" secondAttribute="top" id="meV-AF-2tm"/>
                             <constraint firstItem="86M-sK-LMq" firstAttribute="leading" secondItem="dUD-f0-8MC" secondAttribute="leading" constant="16" id="qBz-Jl-qg2"/>
                             <constraint firstItem="yFB-ud-xJ2" firstAttribute="leading" secondItem="dUD-f0-8MC" secondAttribute="leading" id="qoP-mo-a0i"/>
                             <constraint firstItem="dUD-f0-8MC" firstAttribute="trailing" secondItem="J1y-rV-7J4" secondAttribute="trailing" constant="16" id="r5L-cc-7zP"/>
                             <constraint firstItem="J1y-rV-7J4" firstAttribute="top" secondItem="wdh-TY-d0A" secondAttribute="bottom" constant="8" id="v3R-Ym-Ah7"/>
-                            <constraint firstItem="86M-sK-LMq" firstAttribute="top" secondItem="wzg-3Y-ZMq" secondAttribute="bottom" constant="16" id="vXh-KD-u9G"/>
                             <constraint firstItem="dUD-f0-8MC" firstAttribute="trailing" secondItem="4KK-i8-6Og" secondAttribute="trailing" constant="32" id="zZ6-g2-6Xl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dUD-f0-8MC"/>
@@ -178,8 +149,6 @@
                     <connections>
                         <outlet property="adminTitleLabel" destination="hG9-Mu-m2j" id="uC9-77-I11"/>
                         <outlet property="backButton" destination="wdK-V4-vNP" id="Ccf-UL-0QM"/>
-                        <outlet property="calendarEmailLabel" destination="59z-q3-554" id="Jc6-nL-Ukw"/>
-                        <outlet property="calendarEmailTextField" destination="fbo-OZ-dR1" id="rrZ-6E-oFm"/>
                         <outlet property="changeButton" destination="86M-sK-LMq" id="ApE-Gg-TNy"/>
                         <outlet property="createButton" destination="vKq-Us-IDd" id="KFW-8T-nnr"/>
                         <outlet property="createOrganizationButton" destination="86M-sK-LMq" id="WRX-Uh-WDy"/>
@@ -202,7 +171,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Sxu-Wo-laR">
-                                <rect key="frame" x="16" y="36" width="288" height="143.5"/>
+                                <rect key="frame" x="16" y="36" width="288" height="77"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Organization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ms-T0-XCs">
                                         <rect key="frame" x="41" y="0.0" width="206.5" height="29"/>
@@ -220,37 +189,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="PJZ-ZC-NYm">
-                                        <rect key="frame" x="0.0" y="93" width="288" height="50.5"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calendar Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-EK-R9H">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="32"/>
-                                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="32" id="MWk-C4-FDy"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* For fetching events from calendar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4S5-bs-nVR">
-                                                <rect key="frame" x="0.0" y="36" width="288" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="yby-cq-p6u" firstAttribute="leading" secondItem="Sxu-Wo-laR" secondAttribute="leading" id="4uO-N7-VPi"/>
                                     <constraint firstAttribute="trailing" secondItem="yby-cq-p6u" secondAttribute="trailing" id="FbR-PS-pi8"/>
-                                    <constraint firstAttribute="trailing" secondItem="PJZ-ZC-NYm" secondAttribute="trailing" id="H8y-OD-4Gj"/>
-                                    <constraint firstItem="PJZ-ZC-NYm" firstAttribute="leading" secondItem="Sxu-Wo-laR" secondAttribute="leading" id="mdX-6O-Fiq"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BbY-uY-gk3">
-                                <rect key="frame" x="16" y="211.5" width="288" height="321.5"/>
+                                <rect key="frame" x="16" y="145" width="288" height="321.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEc-k3-bM8">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="21.5"/>
@@ -349,7 +295,6 @@
                         <viewLayoutGuide key="safeArea" id="Oaf-Eo-pk2"/>
                     </view>
                     <connections>
-                        <outlet property="calendarEmailTextField" destination="Me9-EK-R9H" id="DlJ-NO-6rn"/>
                         <outlet property="cityTextField" destination="Nzm-Tl-gJd" id="6mk-TD-J1K"/>
                         <outlet property="contactEmailTextField" destination="S4u-2z-heN" id="CJP-9z-8r3"/>
                         <outlet property="createButton" destination="gg5-tY-hLL" id="j5Q-OF-hJH"/>
@@ -362,7 +307,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="345-ZC-IKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="145"/>
+            <point key="canvasLocation" x="379" y="-115"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yRl-fX-Tvy">
+            <objects>
+                <viewController id="p4O-YG-1GG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TSv-oT-t4G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="t4D-jZ-pkA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oUH-sG-HFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="611"/>
         </scene>
     </scenes>
 </document>
