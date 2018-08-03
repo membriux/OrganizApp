@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     var posts = [Post]()
 
+    @IBOutlet weak var organizationBarTitle: UINavigationItem!
     @IBOutlet weak var aboutButton: UIBarButtonItem!
     @IBOutlet weak var postTable: UITableView!
 
@@ -21,17 +22,17 @@ class HomeViewController: UIViewController {
     }
     
     func configureViewController() {
-        if Home.currentOrgId != "" {
+        if UD.currentOrg != "" {
             // change title
+            organizationBarTitle.title = UD.currentOrg
             getPosts()
         }
     }
     
     func getPosts() {
-        OrganizationService.show(forUID: Home.currentOrgId) { (organization) in
+        OrganizationService.show(forUID: UD.currentOrgId) { (organization) in
             guard let organization = organization else { return }
             PostService.posts(for: organization) { (posts) in
-//                print("Obtaining posts from:", organization.organizationUsername, "with uid:", organization.uid)
                 self.posts = posts
                 self.postTable.reloadData()
             }
@@ -43,11 +44,8 @@ class HomeViewController: UIViewController {
         // Show about page
     }
     
-  
-
-    
-    
 }
+
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     

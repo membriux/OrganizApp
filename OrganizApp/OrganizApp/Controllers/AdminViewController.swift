@@ -31,22 +31,24 @@ class AdminViewController: UIViewController {
     
     // Create post
     @IBAction func postButtonTapped(_ sender: UIButton) {
-        let orgUid = admin.managingOrgID
         guard let subject = subjectTextField.text,
             let content = postContent.text,
         !subject.isEmpty && !content.isEmpty else { return }
-        PostService.create(subject: subject, content: content, orgUid: orgUid ) { (post) in
+        PostService.create(subject: subject, content: content, orgUid: admin.managingOrgId ) { (post) in
             guard let _ = post else {
+                print("Oops, something went wrong")
                 return
             }
+            
+            self.postSuccess()
         }
-        postSuccess()
     }
     
+    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+    }
     
     @IBAction func createOrganizationButtonTapped(_ sender: UIButton) {
         performSegue(withIdentifier: Segue.toCreateOrganization, sender: self)
-        
     }
     
     

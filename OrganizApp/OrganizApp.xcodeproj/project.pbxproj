@@ -34,7 +34,8 @@
 		BB62E4E321079EB800209286 /* OrganizApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB62E4E121079EB800209286 /* OrganizApp.xcdatamodeld */; };
 		BB62E4E521079EB900209286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB62E4E421079EB900209286 /* Assets.xcassets */; };
 		BB62E4E821079EB900209286 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB62E4E621079EB900209286 /* LaunchScreen.storyboard */; };
-		BBE0F3C321122D2A00BD17AD /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE0F3C221122D2A00BD17AD /* CalendarService.swift */; };
+		BB9B84D521138BAC002D17AB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9B84D421138BAC002D17AB /* Event.swift */; };
+		BB9B84D72113A378002D17AB /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9B84D62113A378002D17AB /* EventService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,7 +69,8 @@
 		BB62E4E421079EB900209286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB62E4E721079EB900209286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB62E4E921079EB900209286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBE0F3C221122D2A00BD17AD /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
+		BB9B84D421138BAC002D17AB /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		BB9B84D62113A378002D17AB /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 		C4873FD94915F0FEE17AFA0B /* Pods-OrganizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrganizApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrganizApp/Pods-OrganizApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 				BB533BBF2107D97100658955 /* Admin.swift */,
 				BB0C3166210A8C3400293E4A /* Organization.swift */,
 				BB3086EA210FAEFC00B241E5 /* Post.swift */,
+				BB9B84D421138BAC002D17AB /* Event.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,7 +204,7 @@
 				BB4629882108E4E000CA7FE4 /* AdminService.swift */,
 				BB0C3168210A940300293E4A /* OrganizationService.swift */,
 				BB3086EC210FAF0C00B241E5 /* PostService.swift */,
-				BBE0F3C221122D2A00BD17AD /* CalendarService.swift */,
+				BB9B84D62113A378002D17AB /* EventService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB9B84D72113A378002D17AB /* EventService.swift in Sources */,
 				BB2098572110D1F900954499 /* OrganizationsTableViewCell.swift in Sources */,
 				BB0C3169210A940300293E4A /* OrganizationService.swift in Sources */,
 				BB533BC02107D97100658955 /* Admin.swift in Sources */,
@@ -373,6 +377,7 @@
 				BB3086EB210FAEFC00B241E5 /* Post.swift in Sources */,
 				BB0C3163210A37AB00293E4A /* PostsTableViewCell.swift in Sources */,
 				BB0CFA102112690D006B3E08 /* CreateEventViewController.swift in Sources */,
+				BB9B84D521138BAC002D17AB /* Event.swift in Sources */,
 				BB0C3167210A8C3400293E4A /* Organization.swift in Sources */,
 				BB3086ED210FAF0C00B241E5 /* PostService.swift in Sources */,
 				BB62E4E321079EB800209286 /* OrganizApp.xcdatamodeld in Sources */,
@@ -385,7 +390,6 @@
 				BB3086EF210FC67100B241E5 /* DateUtilitiy.swift in Sources */,
 				BB533BB82107CFE000658955 /* UpcomingEventsViewController.swift in Sources */,
 				BB533BBA2107D01100658955 /* AddOrganizationViewController.swift in Sources */,
-				BBE0F3C321122D2A00BD17AD /* CalendarService.swift in Sources */,
 				BB4629892108E4E000CA7FE4 /* AdminService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -48,7 +48,7 @@ class CreateOrganizationViewController: UIViewController {
 
             // Update admin in from userDefaults
             admin.managingOrg = organizationUsername
-            admin.managingOrgID = organization.uid
+            admin.managingOrgId = organization.uid
             Admin.setCurrent(admin, writeToUserDefaults: true)
             
             AdminService.update(forUID: admin.uid, organizationUID: organization.uid, organization: organizationUsername) { (admin) in

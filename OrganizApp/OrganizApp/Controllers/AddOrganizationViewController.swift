@@ -142,8 +142,12 @@ extension AddOrganizationViewController: UITableViewDataSource, UITableViewDeleg
         let org = UD.orgsArray[indexPath.row]
         guard let orgId = UD.orgsDict[org] as? String else { return }
         
-        Home.currentOrgId = orgId
-        Home.currentOrgName = org
+        
+        UD.currentOrgId = orgId
+        UD.defaults.set(orgId, forKey: "currentOrgId")
+        
+        UD.currentOrg = org
+        UD.defaults.set(org, forKey: "currentOrg")
         
         let initialViewController = UIStoryboard.initialViewController(for: .home)
         self.view.window?.rootViewController = initialViewController

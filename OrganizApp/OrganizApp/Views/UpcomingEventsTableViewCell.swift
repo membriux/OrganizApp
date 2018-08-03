@@ -10,12 +10,14 @@ import UIKit
 import Foundation
 
 class UpcomingEventsTableCell: UITableViewCell {
-    
+
     @IBOutlet weak var eventMonthLabel: UILabel!
     @IBOutlet weak var eventDayLabel: UILabel!
-    @IBOutlet weak var eventTitleLabel: UILabel!
     @IBOutlet weak var eventTimeLabel: UILabel!
+    @IBOutlet weak var eventTitleLabel: UILabel!
+    @IBOutlet weak var eventUrlLabel: UILabel!
     @IBOutlet weak var eventLocationLabel: UILabel!
-    @IBOutlet weak var eventDescriptionLabel: UILabel!
+    @IBOutlet weak var eventNotesLabel: UILabel!
+    
     
 }

@@ -8,7 +8,6 @@
 
 import Foundation
 import FirebaseDatabase.FIRDataSnapshot
-import Foundation
 
 class Post: Codable {
     
@@ -38,7 +37,7 @@ class Post: Codable {
         self.content = content
     }
     
-    // Inits by aquiring admin user from the database
+    // Inits by aquiring post from the database
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
             let creationDate = dict["creationDate"] as? String,

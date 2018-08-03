@@ -44,7 +44,7 @@ class Admin: Codable {
     let adminUsername: String
     
     var managingOrg: String = ""
-    var managingOrgID: String = ""
+    var managingOrgId: String = ""
     
     
     // init Methods
@@ -65,7 +65,7 @@ class Admin: Codable {
         self.uid = snapshot.key
         self.adminUsername = username
         self.managingOrg = managingOrg
-        self.managingOrgID = managingOrgId
+        self.managingOrgId = managingOrgId
     }
     
 }

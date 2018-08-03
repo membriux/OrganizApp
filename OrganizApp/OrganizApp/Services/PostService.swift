@@ -12,7 +12,7 @@ import FirebaseDatabase
 
 struct PostService {
     
-//
+        // UpdatePost function under construction
 //    static func update(forUID uid: String, organizationUID: String, organization: String, completion: @escaping (Admin?) -> Void) {
 //        let admin = Admin.current
 //        let ref = Database.database().reference().child("admins").child(uid)

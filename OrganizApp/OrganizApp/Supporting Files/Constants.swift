@@ -39,23 +39,20 @@ struct UD {
     static let organizationsArray = "organizationsArray"
     static let organizationsDict = "organizationsDict"
     
+    static var currentOrg = defaults.string(forKey: "currentOrg") ?? ""
+    static var currentOrgId = defaults.string(forKey: "currentOrgId") ?? ""
+    
     static var orgsDict = defaults.dictionary(forKey: "organizationsDict") ?? [:]
     static var orgsArray = defaults.stringArray(forKey: "organizationsArray") ?? []
     
 }
 
-struct Home {
+struct DateFormat {
     
-    static var currentOrgId =  ""
-    static var currentOrgName = ""
+    static let eventDateAndTime = "EEEE MMM d yyyy h:mm a"
+    static let postDate = "MMM d, h:mm a"
     
 }
-
-
-
-
-
-
 
 
 
