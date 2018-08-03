@@ -28,7 +28,7 @@ class Admin: Codable {
     // Class methods
     
     // Save user to UserDefaults so they don't have to login again
-    static func setCurrent(_ admin: Admin, writeToUserDefaults: Bool = false) {
+    static func setCurrent(_ admin: Admin?, writeToUserDefaults: Bool = false) {
     
         if writeToUserDefaults {
             if let data = try? JSONEncoder().encode(admin) {

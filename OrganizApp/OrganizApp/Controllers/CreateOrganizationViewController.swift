@@ -23,9 +23,61 @@ class CreateOrganizationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        errorLabel.text = ""
+        configureViewController()
+        
     }
     
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    func configureViewController() {
+        errorLabel.text = ""
+        //init toolbar
+        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
+        //create left side empty space so that done button set on right side
+        
+        let leadingFlex = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        
+        
+        toolbar.setItems([leadingFlex, doneBtn], animated: false)
+        toolbar.sizeToFit()
+        
+        //setting toolbar as inputAccessoryView
+        self.orgUsernameTextField.inputAccessoryView = toolbar
+        self.contactEmailTextField.inputAccessoryView = toolbar
+        self.streetTextField.inputAccessoryView = toolbar
+        self.cityTextField.inputAccessoryView = toolbar
+        self.stateTextField.inputAccessoryView = toolbar
+        self.zipTextField.inputAccessoryView = toolbar
+        
+    }
+    
+    
+    @objc func doneButtonAction() {
+        self.view.endEditing(true)
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        //or
+        //self.view.endEditing(true)
+        return true
+    }
+    
+    
+    func updateCreateButton() {
+        self.createButton.backgroundColor = UIColor.lightGray
+        self.createButton.setTitle("Creating...", for: .normal)
+    }
+    
+    
+    func show(error: String) {
+        self.errorLabel.text = error
+    }
     
     // Creates Organization
     @IBAction func createButtonTapped(_ sender: UIButton) {
@@ -45,7 +97,7 @@ class CreateOrganizationViewController: UIViewController {
             guard let organization = organization else {
                 return
             }
-
+            
             // Update admin in from userDefaults
             admin.managingOrg = organizationUsername
             admin.managingOrgId = organization.uid
@@ -58,19 +110,9 @@ class CreateOrganizationViewController: UIViewController {
             let initialViewController = UIStoryboard.initialViewController(for: .admin)
             self.view.window?.rootViewController = initialViewController
             self.view.window?.makeKeyAndVisible()
-
+            
         }
         
-    }
-    
-    func updateCreateButton() {
-        self.createButton.backgroundColor = UIColor.lightGray
-        self.createButton.setTitle("Creating...", for: .normal)
-    }
-    
-    
-    func show(error: String) {
-        self.errorLabel.text = error
     }
 
     
@@ -78,4 +120,11 @@ class CreateOrganizationViewController: UIViewController {
     
     
 }
+
+
+
+
+
+
+
 

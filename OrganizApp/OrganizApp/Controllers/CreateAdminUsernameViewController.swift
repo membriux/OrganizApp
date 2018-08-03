@@ -36,6 +36,7 @@ class CreateAdminUsernameViewController: UIViewController {
             
             Admin.setCurrent(admin, writeToUserDefaults: true)
             print("Current user:", Admin.current)
+            self.view.endEditing(true)
             
             // Go to admin page storyboard
             let initialViewController = UIStoryboard.initialViewController(for: .admin)

@@ -26,13 +26,18 @@
                                                 <action selector="backButtonTapped:" destination="ckp-Ri-ftj" id="Clo-Jj-GUt"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="fgM-Lc-elp">
+                                            <connections>
+                                                <action selector="logoutButtonTapped:" destination="ckp-Ri-ftj" id="wMr-ss-MJC"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4KK-i8-6Og">
                                 <rect key="frame" x="32" y="80" width="256" height="19.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No organization. Create one!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMK-Fw-Yxn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No organization. Create one!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMK-Fw-Yxn">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -147,10 +152,12 @@
                         <viewLayoutGuide key="safeArea" id="dUD-f0-8MC"/>
                     </view>
                     <connections>
+                        <outlet property="addPostLabel" destination="bII-gO-4cy" id="gDT-Lf-yd7"/>
                         <outlet property="adminTitleLabel" destination="hG9-Mu-m2j" id="uC9-77-I11"/>
                         <outlet property="backButton" destination="wdK-V4-vNP" id="Ccf-UL-0QM"/>
                         <outlet property="createEventButton" destination="Ik8-c7-8sh" id="g95-Ud-6iX"/>
                         <outlet property="createOrganizationButton" destination="86M-sK-LMq" id="ja2-Qz-Ikl"/>
+                        <outlet property="logoutButton" destination="fgM-Lc-elp" id="Jii-nJ-rBA"/>
                         <outlet property="organizationNameLabel" destination="lMK-Fw-Yxn" id="F32-X8-oif"/>
                         <outlet property="postButton" destination="s4s-Lk-UfC" id="Smp-zx-odr"/>
                         <outlet property="postContent" destination="J1y-rV-7J4" id="VeA-l0-cBe"/>
@@ -198,7 +205,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -209,7 +216,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BbY-uY-gk3">
-                                <rect key="frame" x="16" y="146" width="288" height="321.5"/>
+                                <rect key="frame" x="16" y="130" width="288" height="321.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEc-k3-bM8">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="21.5"/>
@@ -239,7 +246,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IZt-sb-ycj">
                                         <rect key="frame" x="0.0" y="85.5" width="288" height="32"/>
@@ -249,7 +256,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="address-line1"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nzm-Tl-gJd">
                                         <rect key="frame" x="0.0" y="133.5" width="288" height="32"/>
@@ -259,7 +266,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="address-level2"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-ZK-vpL">
                                         <rect key="frame" x="0.0" y="181.5" width="288" height="32"/>
@@ -269,7 +276,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="address-level1"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfa-G0-D17">
                                         <rect key="frame" x="0.0" y="229.5" width="288" height="32"/>
@@ -279,7 +286,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="postal-code"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gg5-tY-hLL">
                                         <rect key="frame" x="0.0" y="277.5" width="288" height="44"/>
@@ -302,7 +309,7 @@
                             <constraint firstItem="Oaf-Eo-pk2" firstAttribute="trailing" secondItem="BbY-uY-gk3" secondAttribute="trailing" constant="16" id="N3m-x6-WUZ"/>
                             <constraint firstItem="BbY-uY-gk3" firstAttribute="leading" secondItem="Oaf-Eo-pk2" secondAttribute="leading" constant="16" id="PJW-5e-Mqx"/>
                             <constraint firstItem="Sxu-Wo-laR" firstAttribute="top" secondItem="Oaf-Eo-pk2" secondAttribute="top" constant="16" id="VkR-Ic-3mI"/>
-                            <constraint firstItem="BbY-uY-gk3" firstAttribute="top" secondItem="Sxu-Wo-laR" secondAttribute="bottom" constant="32" id="tfm-Kw-ly8"/>
+                            <constraint firstItem="BbY-uY-gk3" firstAttribute="top" secondItem="Sxu-Wo-laR" secondAttribute="bottom" constant="16" id="tfm-Kw-ly8"/>
                             <constraint firstItem="Oaf-Eo-pk2" firstAttribute="trailing" secondItem="Sxu-Wo-laR" secondAttribute="trailing" constant="16" id="tpq-Th-ONO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Oaf-Eo-pk2"/>
@@ -381,7 +388,7 @@
                                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" textContentType="url"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uPy-ZM-GWE">
                                         <rect key="frame" x="0.0" y="210" width="288" height="118.5"/>

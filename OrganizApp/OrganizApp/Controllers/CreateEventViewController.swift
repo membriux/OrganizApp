@@ -26,6 +26,7 @@ class CreateEventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDatePickers()
+        configureTextFieldInputs()
         
     }
     
@@ -47,10 +48,8 @@ class CreateEventViewController: UIViewController {
             guard let _ = event else { return }
         }
         eventCreatedSuccess()
-        
-        
+
     }
-    
     
     func eventCreatedSuccess() {
         eventTitleTextField.text = ""
@@ -72,18 +71,37 @@ class CreateEventViewController: UIViewController {
 // Extension that handles the DatePicker functionality
 extension CreateEventViewController {
     
-    // Shuts off the datePicker when the view is tapped
-    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
-        view.endEditing(true)
-    }
     
     // Changes the text while the date is being picked
     @objc func dateChanged(datePicker: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = DateFormat.eventDateAndTime
         eventDateTextField.text = dateFormatter.string(from: datePicker.date)
-        view.endEditing(true)
+    }
+    
+    func configureTextFieldInputs() {
+        //init toolbar
+        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
+        //create left side empty space so that done button set on right side
         
+        let leadingFlex = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        
+        
+        toolbar.setItems([leadingFlex, doneBtn], animated: false)
+        toolbar.sizeToFit()
+        
+        //setting toolbar as inputAccessoryView
+        self.eventTitleTextField.inputAccessoryView = toolbar
+        self.eventLocationTextField.inputAccessoryView = toolbar
+        self.eventDateTextField.inputAccessoryView = toolbar
+        self.eventURLTextField.inputAccessoryView = toolbar
+        self.eventDescriptionTextView.inputAccessoryView = toolbar
+    }
+    
+    @objc func doneButtonAction() {
+        self.view.endEditing(true)
     }
     
     // Pops up the date picker and hides it when the user taps on the CreateEventViewController
@@ -92,11 +110,6 @@ extension CreateEventViewController {
         datePicker.datePickerMode = .dateAndTime
         
         datePicker.addTarget(self, action: #selector(CreateEventViewController.dateChanged(datePicker:)), for: .valueChanged)
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CreateEventViewController.viewTapped(gestureRecognizer:)))
-        
-        
-        view.addGestureRecognizer(tapGesture)
         
         eventDateTextField.inputView = datePicker
         

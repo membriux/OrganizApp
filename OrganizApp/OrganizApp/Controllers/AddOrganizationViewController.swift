@@ -24,6 +24,7 @@ class AddOrganizationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
+        configureTextFieldInputs()
         
     }
     
@@ -60,7 +61,7 @@ class AddOrganizationViewController: UIViewController {
             } else {
                 self.showError(org: targetOrg)
             }
-            
+            self.doneButtonAction()
         }
     }
     
@@ -185,6 +186,33 @@ extension AddOrganizationViewController: FUIAuthDelegate {
         
     }
   
+}
+
+extension AddOrganizationViewController {
+    
+    func configureTextFieldInputs() {
+        //init toolbar
+        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
+        //create left side empty space so that done button set on right side
+        
+        let leadingFlex = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        
+        
+        toolbar.setItems([leadingFlex, doneBtn], animated: false)
+        toolbar.sizeToFit()
+        
+        //setting toolbar as inputAccessoryView
+        self.addInputTextField.inputAccessoryView = toolbar
+        
+    }
+    
+    @objc func doneButtonAction() {
+        self.view.endEditing(true)
+    }
+    
+    
 }
 
 

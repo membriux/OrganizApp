@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Firebase
 
 class AdminViewController: UIViewController {
     
     let admin = Admin.current
     
     @IBOutlet weak var backButton: UIBarButtonItem!
+    @IBOutlet weak var logoutButton: UIBarButtonItem!
     @IBOutlet weak var organizationNameLabel: UILabel!
     @IBOutlet weak var adminTitleLabel: UINavigationItem!
+    @IBOutlet weak var addPostLabel: UILabel!
     @IBOutlet weak var subjectTextField: UITextField!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var postContent: UITextView!
@@ -24,10 +27,18 @@ class AdminViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureViewController()
+        configureKeyboard()
         
     }
+    
+    @IBAction func logoutButtonTapped(_ sender: UIBarButtonItem) {
+        handleLogout()
+        
+    }
+    
+    
+    
     
     // Create post
     @IBAction func postButtonTapped(_ sender: UIButton) {
@@ -36,7 +47,6 @@ class AdminViewController: UIViewController {
         !subject.isEmpty && !content.isEmpty else { return }
         PostService.create(subject: subject, content: content, orgUid: admin.managingOrgId ) { (post) in
             guard let _ = post else {
-                print("Oops, something went wrong")
                 return
             }
             
@@ -67,13 +77,46 @@ class AdminViewController: UIViewController {
         performSegue(withIdentifier: Segue.toCreateEvent, sender: self)
     }
     
+    func configureKeyboard() {
+        //init toolbar
+        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
+        //create left side empty space so that done button set on right side
+        
+        let leadingFlex = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        
+        
+        toolbar.setItems([leadingFlex, doneBtn], animated: false)
+        toolbar.sizeToFit()
+        
+        //setting toolbar as inputAccessoryView
+        self.subjectTextField.inputAccessoryView = toolbar
+        self.postContent.inputAccessoryView = toolbar
+    }
+    
+    
+    @objc func doneButtonAction() {
+        self.view.endEditing(true)
+    }
+    
+    
     func configureViewController() {
-        self.adminTitleLabel.title = "Welcome back " + admin.adminUsername + "!"
+        
+        self.adminTitleLabel.title = "Welcome, " + admin.adminUsername + "!"
         if admin.managingOrg != "" {
             createOrganizationButton.isHidden = true
             self.organizationNameLabel.text = "Organization: " + admin.managingOrg
         } else {
-            createEventButton.isHidden = true
+            createEventButton.removeFromSuperview()
+            postButton.isHidden = true
+            subjectTextField.isHidden = true
+            postContent.isHidden = true
+            addPostLabel.isHidden = true
+            organizationNameLabel.text = "Lets get started by creating an organization!"
+            organizationNameLabel.font = organizationNameLabel.font.withSize(32)
+            organizationNameLabel.textColor = UIColor.darkGray
+            
         }
     }
     
@@ -83,6 +126,24 @@ class AdminViewController: UIViewController {
         self.postContent.text = ""
         self.postButton.backgroundColor = UIColor.lightGray
         self.postButton.setTitle("Done!", for: .normal)
+    }
+    
+    // Log out from the firebase and the admin page
+    @objc func handleLogout() {
+        
+        do {
+            try Auth.auth().signOut()
+            Admin.setCurrent(nil, writeToUserDefaults: true)
+            
+            let initialViewController: UIViewController
+            initialViewController = UIStoryboard.initialViewController(for: .home)
+            self.view.window?.rootViewController = initialViewController
+            self.view.window?.makeKeyAndVisible()
+            
+            
+        } catch let logoutError {
+            print(logoutError)
+        }
     }
     
 }
