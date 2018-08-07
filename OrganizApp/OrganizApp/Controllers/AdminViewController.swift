@@ -12,6 +12,8 @@ import Firebase
 class AdminViewController: UIViewController {
     
     let admin = Admin.current
+    var time = 2
+    var successTimer = Timer()
     
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var logoutButton: UIBarButtonItem!
@@ -29,6 +31,7 @@ class AdminViewController: UIViewController {
         super.viewDidLoad()
         configureViewController()
         configureKeyboard()
+
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -44,12 +47,14 @@ class AdminViewController: UIViewController {
         guard let subject = subjectTextField.text,
             let content = postContent.text,
         !subject.isEmpty && !content.isEmpty else { return }
+        setLoadingStatus()
+        
         PostService.create(subject: subject, content: content, orgUid: admin.managingOrgId ) { (post) in
-            guard let _ = post else {
-                return
-            }
+
+            guard let _ = post else { return }
             
-            self.postSuccess()
+            self.successTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AdminViewController.postSuccess), userInfo: nil, repeats: true)
+            
         }
     }
     
@@ -94,7 +99,7 @@ class AdminViewController: UIViewController {
         self.postContent.inputAccessoryView = toolbar
     }
     
-    
+    // Dismiss keyboard when "Done" pressed
     @objc func doneButtonAction() {
         self.view.endEditing(true)
     }
@@ -119,12 +124,33 @@ class AdminViewController: UIViewController {
     }
     
     
-    func postSuccess() {
+    func setLoadingStatus() {
         self.subjectTextField.text = ""
         self.postContent.text = ""
+        self.postButton.setTitle("Loading...", for: .normal)
         self.postButton.backgroundColor = UIColor.lightGray
-        self.postButton.setTitle("Done!", for: .normal)
+        
     }
+    
+    @objc func postSuccess() {
+        // Reset textField
+        
+        
+        // Decrementing the game timer by 1
+        time -= 1
+        if time == 0 {
+            self.postButton.backgroundColor = Colors.darkBlue
+            self.postButton.setTitle("Post", for: .normal)
+            successTimer.invalidate()
+            time = 2
+        }
+        else {
+            self.postButton.backgroundColor = UIColor.lightGray
+            self.postButton.setTitle("Done!", for: .normal)
+        }
+    }
+    
+    
     
     // Log out from the firebase and the admin page
     @objc func handleLogout() {

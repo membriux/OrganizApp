@@ -11,10 +11,12 @@ import FirebaseDatabase
 
 class CreateEventViewController: UIViewController {
     
-    var datePicker = UIDatePicker()
-    let admin = Admin.current
     
-
+    let admin = Admin.current
+    var datePicker = UIDatePicker()
+    var time = 2
+    var successTimer = Timer()
+    
     @IBOutlet weak var eventTitleTextField: UITextField!
     @IBOutlet weak var eventLocationTextField: UITextField!
     @IBOutlet weak var eventDateTextField: UITextField!
@@ -44,28 +46,44 @@ class CreateEventViewController: UIViewController {
             let notes = eventDescriptionTextView.text,
         !title.isEmpty && !location.isEmpty && !date.isEmpty
             else { print("Should contain at least title, date, and location"); return  }
+        setLoadingStatus()
         
         // Create event if required inputs are valid
         EventService.create(orgUid: admin.managingOrgId , title: title, location: location, dateAndTime: date, notes: notes, url: url) { (event) in
             guard let _ = event else { return }
+            
+            self.successTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(CreateEventViewController.eventCreatedSuccess), userInfo: nil, repeats: true)
         }
-        eventCreatedSuccess()
 
     }
     
-    func eventCreatedSuccess() {
+    
+    func setLoadingStatus() {
         eventTitleTextField.text = ""
         eventLocationTextField.text = ""
         eventDateTextField.text = ""
         eventURLTextField.text = ""
         eventDescriptionTextView.text = ""
         
-        createEventButton.setTitle("Done!", for: .normal)
-        createEventButton.backgroundColor = UIColor.gray
-        self.view.endEditing(true)
+        createEventButton.setTitle("Creating Event...", for: .normal)
+        createEventButton.backgroundColor = UIColor.lightGray
     }
     
-    
+    @objc func eventCreatedSuccess() {
+        // Decrementing the game timer by 1
+        time -= 1
+        if time == 0 {
+            self.createEventButton.backgroundColor = Colors.lightOrange
+            self.createEventButton.setTitle("Post", for: .normal)
+            
+            successTimer.invalidate()
+            time = 2
+        }
+        else {
+            self.createEventButton.backgroundColor = UIColor.lightGray
+            self.createEventButton.setTitle("Done!", for: .normal)
+        }
+    }
 
 }
 
