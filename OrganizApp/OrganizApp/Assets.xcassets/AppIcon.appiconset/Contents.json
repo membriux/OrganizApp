@@ -27,7 +27,7 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "Artboard-1-40@2x.png",
+      "filename" : "Artboard-1-Small-40@2x.png",
       "scale" : "2x"
     },
     {
@@ -96,7 +96,7 @@
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "Artboard-1-Artwork.png",
+      "filename" : "App Store Icon.png",
       "scale" : "1x"
     }
   ],
