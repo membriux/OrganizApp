@@ -24,14 +24,14 @@ class UpcomingEventsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
-        
     }
-    
     
     @IBAction func aboutButtonTapped(_ sender: UIBarButtonItem) {
-        // Show about page
+        performSegue(withIdentifier: Segue.toViewAboutPage, sender: self)
     }
     
+    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+    }
     
     func configureViewController() {
         if UD.currentOrg != "" {

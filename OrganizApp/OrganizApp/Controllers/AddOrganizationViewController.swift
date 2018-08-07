@@ -25,8 +25,12 @@ class AddOrganizationViewController: UIViewController {
         super.viewDidLoad()
         configureViewController()
         configureTextFieldInputs()
-        
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent // .default
+    }
+
     
     
     @IBAction func adminButtonTapped(_ sender: Any) {
@@ -86,6 +90,8 @@ class AddOrganizationViewController: UIViewController {
     
     func configureViewController() {
         self.status.text = ""
+        addInputTextField.attributedPlaceholder = NSAttributedString(string: "Ex: Square Soccer",attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+
     }
     
     // Checks whether an admin is signed in. If not, they would log in
@@ -110,7 +116,8 @@ class AddOrganizationViewController: UIViewController {
             initialViewController = UIStoryboard.initialViewController(for: .admin)
             self.view.window?.rootViewController = initialViewController
             self.view.window?.makeKeyAndVisible()
-            
+        
+        // If no user in firebase exists
         } else {
             let authViewController = authUI.authViewController()
             present(authViewController, animated: true)
@@ -131,7 +138,14 @@ extension AddOrganizationViewController: UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrganizationsTableCell", for: indexPath) as! OrganizationsTableCell
     
-        cell.organizationNameLabel.text = UD.orgsArray[indexPath.row]
+        let org = UD.orgsArray[indexPath.row]
+        cell.organizationNameLabel.text = "•    " + org
+        if UD.currentOrg == org {
+            cell.organizationNameLabel.textColor = UIColor.orange
+            cell.organizationNameLabel.font = UIFont.boldSystemFont(ofSize: 18)
+//            cell.backgroundColor = UIColor.orange
+        }
+        
         
         return cell
     }

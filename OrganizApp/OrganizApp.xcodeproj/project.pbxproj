@@ -36,6 +36,9 @@
 		BB62E4E821079EB900209286 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB62E4E621079EB900209286 /* LaunchScreen.storyboard */; };
 		BB9B84D521138BAC002D17AB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9B84D421138BAC002D17AB /* Event.swift */; };
 		BB9B84D72113A378002D17AB /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9B84D62113A378002D17AB /* EventService.swift */; };
+		BBFEBD8F2118C660006E3544 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFEBD8E2118C660006E3544 /* Colors.swift */; };
+		BBFEBD922118EA30006E3544 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBFEBD902118EA30006E3544 /* About.storyboard */; };
+		BBFEBD942118EA6A006E3544 /* AboutPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFEBD932118EA6A006E3544 /* AboutPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +74,9 @@
 		BB62E4E921079EB900209286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB9B84D421138BAC002D17AB /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BB9B84D62113A378002D17AB /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		BBFEBD8E2118C660006E3544 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BBFEBD912118EA30006E3544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/About.storyboard; sourceTree = "<group>"; };
+		BBFEBD932118EA6A006E3544 /* AboutPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPageViewController.swift; sourceTree = "<group>"; };
 		C4873FD94915F0FEE17AFA0B /* Pods-OrganizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrganizApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrganizApp/Pods-OrganizApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				BB46298E210929F200CA7FE4 /* Constants.swift */,
+				BBFEBD8E2118C660006E3544 /* Colors.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -186,6 +193,7 @@
 				BB52B1582107DC240036CB3E /* CreateAdminUsernameViewController.swift */,
 				BB3086E8210F7C9700B241E5 /* CreateOrganizationViewController.swift */,
 				BB0CFA0F2112690D006B3E08 /* CreateEventViewController.swift */,
+				BBFEBD932118EA6A006E3544 /* AboutPageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +220,7 @@
 		BB62E4F721079F7400209286 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				BBFEBD902118EA30006E3544 /* About.storyboard */,
 				BB62E4E621079EB900209286 /* LaunchScreen.storyboard */,
 				BB62E4DE21079EB800209286 /* Home.storyboard */,
 				BB46298A2108EF8900CA7FE4 /* Admin.storyboard */,
@@ -292,6 +301,7 @@
 			files = (
 				BB62E4E821079EB900209286 /* LaunchScreen.storyboard in Resources */,
 				BB46298C2108EF8900CA7FE4 /* Admin.storyboard in Resources */,
+				BBFEBD922118EA30006E3544 /* About.storyboard in Resources */,
 				BB533BA92107AC9600658955 /* GoogleService-Info.plist in Resources */,
 				BB62E4E521079EB900209286 /* Assets.xcassets in Resources */,
 				BB62E4E021079EB800209286 /* Home.storyboard in Resources */,
@@ -369,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB9B84D72113A378002D17AB /* EventService.swift in Sources */,
+				BBFEBD8F2118C660006E3544 /* Colors.swift in Sources */,
 				BB2098572110D1F900954499 /* OrganizationsTableViewCell.swift in Sources */,
 				BB0C3169210A940300293E4A /* OrganizationService.swift in Sources */,
 				BB533BC02107D97100658955 /* Admin.swift in Sources */,
@@ -377,6 +388,7 @@
 				BB3086EB210FAEFC00B241E5 /* Post.swift in Sources */,
 				BB0C3163210A37AB00293E4A /* PostsTableViewCell.swift in Sources */,
 				BB0CFA102112690D006B3E08 /* CreateEventViewController.swift in Sources */,
+				BBFEBD942118EA6A006E3544 /* AboutPageViewController.swift in Sources */,
 				BB9B84D521138BAC002D17AB /* Event.swift in Sources */,
 				BB0C3167210A8C3400293E4A /* Organization.swift in Sources */,
 				BB3086ED210FAF0C00B241E5 /* PostService.swift in Sources */,
@@ -419,6 +431,14 @@
 				BB62E4E721079EB900209286 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BBFEBD902118EA30006E3544 /* About.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBFEBD912118EA30006E3544 /* Base */,
+			);
+			name = About.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -546,7 +566,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VVT5BZ4Y5;
 				INFOPLIST_FILE = OrganizApp/Supporting/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,7 +574,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.membriux.organizapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -566,7 +586,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VVT5BZ4Y5;
 				INFOPLIST_FILE = OrganizApp/Supporting/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,7 +594,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.membriux.organizapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

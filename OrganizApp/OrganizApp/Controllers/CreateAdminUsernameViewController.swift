@@ -20,6 +20,10 @@ class CreateAdminUsernameViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent // .default
+    }
+    
     
     // Create Admin User
     @IBAction func nextButtonTapped(_ sender: UIButton) {

@@ -105,6 +105,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !launchedBefore  {
             UserDefaults.standard.set(true, forKey: "launchedBefore")
             createUserDefaultsArray()
+
         }
     }
     

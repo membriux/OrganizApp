@@ -21,11 +21,22 @@ class HomeViewController: UIViewController {
         configureViewController()
     }
     
+    
+    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func aboutButtonTapped(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: Segue.toViewAboutPage, sender: self)
+    }
+    
+    
     func configureViewController() {
         if UD.currentOrg != "" {
             // change title
             organizationBarTitle.title = UD.currentOrg
             getPosts()
+        } else {
+            organizationBarTitle.rightBarButtonItem?.isEnabled = false
         }
     }
     
@@ -40,9 +51,6 @@ class HomeViewController: UIViewController {
     }
     
     
-    @IBAction func aboutButtonTapped(_ sender: UIBarButtonItem) {
-        // Show about page
-    }
     
 }
 

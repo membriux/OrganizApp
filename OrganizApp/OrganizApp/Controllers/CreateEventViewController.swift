@@ -27,9 +27,11 @@ class CreateEventViewController: UIViewController {
         super.viewDidLoad()
         configureDatePickers()
         configureTextFieldInputs()
-        
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent // .default
+    }
     
     // Create an event and upload it to firebase
     @IBAction func createEventButtonTapped(_ sender: Any) {

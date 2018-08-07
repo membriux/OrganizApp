@@ -29,16 +29,15 @@ class AdminViewController: UIViewController {
         super.viewDidLoad()
         configureViewController()
         configureKeyboard()
-        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent // .default
     }
     
     @IBAction func logoutButtonTapped(_ sender: UIBarButtonItem) {
         handleLogout()
-        
     }
-    
-    
-    
     
     // Create post
     @IBAction func postButtonTapped(_ sender: UIButton) {
@@ -115,7 +114,6 @@ class AdminViewController: UIViewController {
             addPostLabel.isHidden = true
             organizationNameLabel.text = "Lets get started by creating an organization!"
             organizationNameLabel.font = organizationNameLabel.font.withSize(32)
-            organizationNameLabel.textColor = UIColor.darkGray
             
         }
     }
