@@ -30,17 +30,20 @@ struct PostService {
     
     // Show posts of an organization
     static func posts(for organization: Organization, completion: @escaping ([Post]) -> Void) {
-        let ref = Database.database().reference().child("posts").child(organization.uid)
         
+        let ref = Database.database().reference().child("posts").child(organization.uid)
+
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
                 return completion([])
             }
-            
+
             let posts = snapshot.reversed().compactMap(Post.init)
-            
+
             completion(posts)
         })
+        
+        
     }
     
     

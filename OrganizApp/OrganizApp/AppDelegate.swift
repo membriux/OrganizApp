@@ -23,11 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         launchedBefore()
         
-        // Changing main storyboard
-        let initialViewController = UIStoryboard.initialViewController(for: .home)
-        window?.rootViewController = initialViewController
-        window?.makeKeyAndVisible()
-        
 //        registerForPushNotifications()
         
         
@@ -103,16 +98,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    // Checks if it's the first time launching the app
-    func launchedBefore() {
-        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
-        if !launchedBefore  {
-            UserDefaults.standard.set(true, forKey: "launchedBefore")
-            createUserDefaultsArray()
-
-        }
-    }
-    
     
     // Creates empty array that will be used for storing the organizations that the user saves
     func createUserDefaultsArray() {
@@ -121,6 +106,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UD.defaults.set(orgDict, forKey: "organizationsDict")
         UD.defaults.set(orgArray, forKey: "organizationsArray")
     }
+    
+    
+    // Checks if it's the first time launching the app
+    func launchedBefore() {
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if !launchedBefore  {
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            createUserDefaultsArray()
+            
+            let storyboard = UIStoryboard(name: "Tutorial", bundle: .main)
+            
+            if let initialViewController = storyboard.instantiateInitialViewController() {
+                window?.rootViewController = initialViewController
+                window?.makeKeyAndVisible()
+            }
+            
+        } else {
+            let initialViewController: UIViewController
+            initialViewController = UIStoryboard.initialViewController(for: .home)
+            window?.rootViewController = initialViewController
+            window?.makeKeyAndVisible()
+        }
+        
+        
+    }
+    
+    
+
     
     
     
@@ -160,13 +173,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    }
 
 }
-
-
-
-
-
-
-
 
 
 

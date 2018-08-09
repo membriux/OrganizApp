@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-BE-RFg">
-                                <rect key="frame" x="319" y="36" width="40" height="33"/>
+                                <rect key="frame" x="317" y="24" width="40" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.99055147170000002" green="0.66987519790000005" blue="0.032983742650000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -28,7 +29,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="aTr-0B-CG3">
-                                <rect key="frame" x="16" y="85" width="343" height="246.5"/>
+                                <rect key="frame" x="16" y="73" width="343" height="246.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organization Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jY-hJ-C3h">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
@@ -78,11 +79,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aTr-0B-CG3" firstAttribute="top" secondItem="vS2-BE-RFg" secondAttribute="bottom" constant="16" id="BJW-bn-vOk"/>
-                            <constraint firstItem="vS2-BE-RFg" firstAttribute="top" secondItem="cKN-pj-Vvg" secondAttribute="top" constant="16" id="D3n-rF-yVx"/>
+                            <constraint firstItem="vS2-BE-RFg" firstAttribute="top" secondItem="cKN-pj-Vvg" secondAttribute="top" constant="4" id="D3n-rF-yVx"/>
                             <constraint firstItem="cKN-pj-Vvg" firstAttribute="trailing" secondItem="aTr-0B-CG3" secondAttribute="trailing" constant="16" id="FdI-VN-t74"/>
                             <constraint firstItem="aTr-0B-CG3" firstAttribute="leading" secondItem="cKN-pj-Vvg" secondAttribute="leading" constant="16" id="Qar-TB-JMG"/>
                             <constraint firstItem="vS2-BE-RFg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cKN-pj-Vvg" secondAttribute="leading" constant="32" id="bLU-0X-A0V"/>
-                            <constraint firstItem="cKN-pj-Vvg" firstAttribute="trailing" secondItem="vS2-BE-RFg" secondAttribute="trailing" constant="16" id="bus-RN-tNS"/>
+                            <constraint firstItem="cKN-pj-Vvg" firstAttribute="trailing" secondItem="vS2-BE-RFg" secondAttribute="trailing" constant="18" id="bus-RN-tNS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cKN-pj-Vvg"/>
                     </view>

@@ -49,8 +49,8 @@ class Event {
             else { return nil }
         
         self.uid = snapshot.key
-        self.title = "Event: " + title
-        self.location = "Location: " + location
+        self.title = title
+        self.location = location
         self.dateAndTime = dateAndTime
         
         if url != "" {

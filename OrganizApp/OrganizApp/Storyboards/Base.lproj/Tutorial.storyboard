@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EUo-fZ-id2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorial View Controller-->
+        <scene sceneID="nk6-fg-mWo">
+            <objects>
+                <viewController id="EUo-fZ-id2" customClass="TutorialViewController" customModule="OrganizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uI8-wI-Vah">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLv-4v-WHJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="1280"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTn-Jl-fwU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qpW-gg-4VS">
+                                                <rect key="frame" x="16" y="16" width="343" height="372"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Welcome to OrganizApp!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFV-pT-adl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <color key="textColor" red="0.14901960780000001" green="0.23921568630000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jj-D9-Ac9">
+                                                        <rect key="frame" x="0.0" y="40" width="343" height="95.5"/>
+                                                        <string key="text">OrganizApp allows you to connect with your organizations and stay up to date with them. NO usernames or passwords required to connect with them! Scroll down to learn how to use OrganizApp!</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to use OrganizApp: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkf-ko-2Ge">
+                                                        <rect key="frame" x="0.0" y="151.5" width="343" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.1450980392" green="0.23921568630000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Tap on  &quot;Add&quot; below your screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhq-ec-Zfp">
+                                                        <rect key="frame" x="16" y="188" width="327" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YMl-7g-KJr">
+                                                        <rect key="frame" x="16" y="224.5" width="327" height="54"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Type the name of your organization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gQ-7N-wCm">
+                                                                <rect key="frame" x="0.0" y="0.0" width="327" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: Make sure your organization is registered with OrganizApp" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzt-gs-m2J">
+                                                                <rect key="frame" x="0.0" y="20.5" width="327" height="33.5"/>
+                                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Tap on the &quot;Add&quot; Button " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeN-S5-ktu">
+                                                        <rect key="frame" x="16" y="294.5" width="327" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now you should have your organization listed as shown below:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDD-EN-1lJ">
+                                                        <rect key="frame" x="0.0" y="331" width="343" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="jhq-ec-Zfp" firstAttribute="leading" secondItem="qpW-gg-4VS" secondAttribute="leading" constant="16" id="2Tb-5f-M5M"/>
+                                                    <constraint firstItem="LeN-S5-ktu" firstAttribute="leading" secondItem="qpW-gg-4VS" secondAttribute="leading" constant="16" id="8ra-Vq-tAK"/>
+                                                    <constraint firstItem="1Jj-D9-Ac9" firstAttribute="leading" secondItem="qpW-gg-4VS" secondAttribute="leading" id="HEp-q0-7h5"/>
+                                                    <constraint firstItem="YMl-7g-KJr" firstAttribute="leading" secondItem="qpW-gg-4VS" secondAttribute="leading" constant="16" id="KAK-OP-eAF"/>
+                                                    <constraint firstItem="Wkf-ko-2Ge" firstAttribute="leading" secondItem="qpW-gg-4VS" secondAttribute="leading" id="O0j-LG-ef7"/>
+                                                    <constraint firstItem="WDD-EN-1lJ" firstAttribute="leading" secondItem="qpW-gg-4VS" secondAttribute="leading" id="bsm-Q4-O1G"/>
+                                                    <constraint firstItem="rFV-pT-adl" firstAttribute="leading" secondItem="qpW-gg-4VS" secondAttribute="leading" id="vmh-aO-TQm"/>
+                                                </constraints>
+                                            </stackView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addTutorial" translatesAutoresizingMaskIntoConstraints="NO" id="VCJ-hd-JPs">
+                                                <rect key="frame" x="57" y="407" width="260" height="400"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="260" id="MCB-qh-zgl"/>
+                                                    <constraint firstAttribute="height" constant="400" id="YLr-t7-PIh"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="T0Y-6e-z2y">
+                                                <rect key="frame" x="15" y="831" width="344" height="57.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Once you tap on the organization you added, you should be able to view the news feed and upcoming events of your organization!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7t-1M-fM7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="344" height="57.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="O7t-1M-fM7" firstAttribute="leading" secondItem="T0Y-6e-z2y" secondAttribute="leading" id="yNl-OH-cXW"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="SuZ-LN-UQV">
+                                                <rect key="frame" x="16" y="904.5" width="343" height="173"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start by adding your first organization!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJY-GN-s4u">
+                                                        <rect key="frame" x="25" y="0.0" width="293.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T9T-0U-C8k">
+                                                        <rect key="frame" x="0.0" y="38.5" width="343" height="44"/>
+                                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="1vt-D3-m23"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g63-uj-KQh">
+                                                        <rect key="frame" x="0.0" y="100.5" width="343" height="72.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejn-sc-2gV">
+                                                                <rect key="frame" x="132.5" y="0.0" width="78.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.98320853710174561" green="0.1024294520688265" blue="0.08786638300411706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oic-i7-sEn">
+                                                                <rect key="frame" x="0.0" y="28.5" width="343" height="44"/>
+                                                                <color key="backgroundColor" red="0.3803921569" green="0.6588235294" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="8eT-21-cRD"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                                <state key="normal" title="Add Organization"/>
+                                                                <connections>
+                                                                    <action selector="addOrganization:" destination="EUo-fZ-id2" eventType="touchUpInside" id="hvY-qV-SEn"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="oic-i7-sEn" firstAttribute="width" secondItem="g63-uj-KQh" secondAttribute="width" id="0wx-H6-Dx1"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="g63-uj-KQh" secondAttribute="trailing" id="HVw-FA-I7b"/>
+                                                    <constraint firstItem="g63-uj-KQh" firstAttribute="leading" secondItem="SuZ-LN-UQV" secondAttribute="leading" id="LgF-bs-pDc"/>
+                                                    <constraint firstItem="T9T-0U-C8k" firstAttribute="leading" secondItem="SuZ-LN-UQV" secondAttribute="leading" id="aVD-Iu-TrO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="T9T-0U-C8k" secondAttribute="trailing" id="vuX-Df-aQH"/>
+                                                </constraints>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ik-0j-NPz">
+                                                <rect key="frame" x="16" y="1117.5" width="343" height="44"/>
+                                                <color key="backgroundColor" red="0.1450980392" green="0.23921568630000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="avj-vJ-cRn"/>
+                                                </constraints>
+                                                <state key="normal" title="Finish Tutorial"/>
+                                                <connections>
+                                                    <action selector="finishButtonTapped:" destination="EUo-fZ-id2" eventType="touchUpInside" id="DpL-Pb-IoB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.98320855034722221" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="SuZ-LN-UQV" firstAttribute="leading" secondItem="CTn-Jl-fwU" secondAttribute="leading" constant="16" id="6JI-wq-mtt"/>
+                                            <constraint firstItem="3ik-0j-NPz" firstAttribute="top" secondItem="SuZ-LN-UQV" secondAttribute="bottom" constant="40" id="6sf-ZH-U5b"/>
+                                            <constraint firstAttribute="trailing" secondItem="SuZ-LN-UQV" secondAttribute="trailing" constant="16" id="AIU-CR-rIY"/>
+                                            <constraint firstAttribute="trailing" secondItem="3ik-0j-NPz" secondAttribute="trailing" constant="16" id="HuX-LJ-flw"/>
+                                            <constraint firstItem="VCJ-hd-JPs" firstAttribute="centerX" secondItem="qpW-gg-4VS" secondAttribute="centerX" id="IFs-g5-GSD"/>
+                                            <constraint firstAttribute="height" constant="1300" id="KC4-BV-HMb"/>
+                                            <constraint firstItem="qpW-gg-4VS" firstAttribute="top" secondItem="CTn-Jl-fwU" secondAttribute="top" constant="16" id="OAu-wZ-SFa"/>
+                                            <constraint firstItem="qpW-gg-4VS" firstAttribute="leading" secondItem="CTn-Jl-fwU" secondAttribute="leading" constant="16" id="Tiy-3h-NKf"/>
+                                            <constraint firstAttribute="trailing" secondItem="T0Y-6e-z2y" secondAttribute="trailing" constant="16" id="Wl9-Wk-VbB"/>
+                                            <constraint firstAttribute="trailing" secondItem="qpW-gg-4VS" secondAttribute="trailing" constant="16" id="ZgK-1i-9KS"/>
+                                            <constraint firstItem="T0Y-6e-z2y" firstAttribute="top" secondItem="VCJ-hd-JPs" secondAttribute="bottom" constant="24" id="Zgj-bS-paQ"/>
+                                            <constraint firstItem="T0Y-6e-z2y" firstAttribute="leading" secondItem="CTn-Jl-fwU" secondAttribute="leading" constant="15" id="btj-t6-nGD"/>
+                                            <constraint firstItem="VCJ-hd-JPs" firstAttribute="top" secondItem="qpW-gg-4VS" secondAttribute="bottom" constant="19" id="dBc-I3-1Fe"/>
+                                            <constraint firstItem="3ik-0j-NPz" firstAttribute="leading" secondItem="CTn-Jl-fwU" secondAttribute="leading" constant="16" id="mLG-1a-1EO"/>
+                                            <constraint firstItem="SuZ-LN-UQV" firstAttribute="top" secondItem="T0Y-6e-z2y" secondAttribute="bottom" constant="16" id="p8b-f6-lnY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CTn-Jl-fwU" secondAttribute="bottom" id="EHu-RP-g5F"/>
+                                    <constraint firstItem="CTn-Jl-fwU" firstAttribute="leading" secondItem="vLv-4v-WHJ" secondAttribute="leading" id="bUW-dq-SgY"/>
+                                    <constraint firstAttribute="trailing" secondItem="CTn-Jl-fwU" secondAttribute="trailing" id="sUJ-Nd-tAq"/>
+                                    <constraint firstItem="CTn-Jl-fwU" firstAttribute="top" secondItem="vLv-4v-WHJ" secondAttribute="top" id="skq-MA-J9E"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vLv-4v-WHJ" firstAttribute="bottom" secondItem="6ED-Ug-l2V" secondAttribute="bottom" id="Jhl-84-NWz"/>
+                            <constraint firstItem="vLv-4v-WHJ" firstAttribute="top" secondItem="6ED-Ug-l2V" secondAttribute="top" id="LXw-Sj-Nhv"/>
+                            <constraint firstItem="vLv-4v-WHJ" firstAttribute="trailing" secondItem="6ED-Ug-l2V" secondAttribute="trailing" id="X0O-Vy-ZOc"/>
+                            <constraint firstItem="CTn-Jl-fwU" firstAttribute="width" secondItem="uI8-wI-Vah" secondAttribute="width" id="dTe-UW-vpu"/>
+                            <constraint firstItem="vLv-4v-WHJ" firstAttribute="leading" secondItem="6ED-Ug-l2V" secondAttribute="leading" id="rGC-M0-NHZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6ED-Ug-l2V"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1300"/>
+                    <connections>
+                        <outlet property="addOrganizationButton" destination="oic-i7-sEn" id="oPO-hB-CYs"/>
+                        <outlet property="errorLabel" destination="Ejn-sc-2gV" id="oeX-cb-fVb"/>
+                        <outlet property="finishButton" destination="3ik-0j-NPz" id="7GS-d6-3Lt"/>
+                        <outlet property="inputTextField" destination="T9T-0U-C8k" id="FJj-fY-DPD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n58-cD-MwU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="78.260869565217391"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addTutorial" width="1046" height="1859"/>
+    </resources>
+</document>

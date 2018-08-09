@@ -18,6 +18,8 @@
 		BB3086EB210FAEFC00B241E5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3086EA210FAEFC00B241E5 /* Post.swift */; };
 		BB3086ED210FAF0C00B241E5 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3086EC210FAF0C00B241E5 /* PostService.swift */; };
 		BB3086EF210FC67100B241E5 /* DateUtilitiy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3086EE210FC67100B241E5 /* DateUtilitiy.swift */; };
+		BB3829CF211B60A7000834F9 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3829CD211B60A7000834F9 /* Tutorial.storyboard */; };
+		BB3829D1211B8F8E000834F9 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3829D0211B8F8E000834F9 /* TutorialViewController.swift */; };
 		BB4629892108E4E000CA7FE4 /* AdminService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4629882108E4E000CA7FE4 /* AdminService.swift */; };
 		BB46298C2108EF8900CA7FE4 /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB46298A2108EF8900CA7FE4 /* Admin.storyboard */; };
 		BB46298F210929F200CA7FE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46298E210929F200CA7FE4 /* Constants.swift */; };
@@ -54,6 +56,8 @@
 		BB3086EA210FAEFC00B241E5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BB3086EC210FAF0C00B241E5 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		BB3086EE210FC67100B241E5 /* DateUtilitiy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilitiy.swift; sourceTree = "<group>"; };
+		BB3829CE211B60A7000834F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tutorial.storyboard; sourceTree = "<group>"; };
+		BB3829D0211B8F8E000834F9 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		BB4629882108E4E000CA7FE4 /* AdminService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminService.swift; sourceTree = "<group>"; };
 		BB46298B2108EF8900CA7FE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Admin.storyboard; sourceTree = "<group>"; };
 		BB46298E210929F200CA7FE4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				BB3086E8210F7C9700B241E5 /* CreateOrganizationViewController.swift */,
 				BB0CFA0F2112690D006B3E08 /* CreateEventViewController.swift */,
 				BBFEBD932118EA6A006E3544 /* AboutPageViewController.swift */,
+				BB3829D0211B8F8E000834F9 /* TutorialViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -220,10 +225,11 @@
 		BB62E4F721079F7400209286 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				BBFEBD902118EA30006E3544 /* About.storyboard */,
 				BB62E4E621079EB900209286 /* LaunchScreen.storyboard */,
+				BBFEBD902118EA30006E3544 /* About.storyboard */,
 				BB62E4DE21079EB800209286 /* Home.storyboard */,
 				BB46298A2108EF8900CA7FE4 /* Admin.storyboard */,
+				BB3829CD211B60A7000834F9 /* Tutorial.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 				BBFEBD922118EA30006E3544 /* About.storyboard in Resources */,
 				BB533BA92107AC9600658955 /* GoogleService-Info.plist in Resources */,
 				BB62E4E521079EB900209286 /* Assets.xcassets in Resources */,
+				BB3829CF211B60A7000834F9 /* Tutorial.storyboard in Resources */,
 				BB62E4E021079EB800209286 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +391,7 @@
 				BB0C3169210A940300293E4A /* OrganizationService.swift in Sources */,
 				BB533BC02107D97100658955 /* Admin.swift in Sources */,
 				BB533BB32107C55E00658955 /* AdminViewController.swift in Sources */,
+				BB3829D1211B8F8E000834F9 /* TutorialViewController.swift in Sources */,
 				BB62E4DD21079EB800209286 /* HomeViewController.swift in Sources */,
 				BB3086EB210FAEFC00B241E5 /* Post.swift in Sources */,
 				BB0C3163210A37AB00293E4A /* PostsTableViewCell.swift in Sources */,
@@ -409,6 +417,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		BB3829CD211B60A7000834F9 /* Tutorial.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB3829CE211B60A7000834F9 /* Base */,
+			);
+			name = Tutorial.storyboard;
+			sourceTree = "<group>";
+		};
 		BB46298A2108EF8900CA7FE4 /* Admin.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
