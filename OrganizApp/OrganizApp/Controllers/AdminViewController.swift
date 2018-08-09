@@ -145,7 +145,7 @@ class AdminViewController: UIViewController {
             time = 2
         }
         else {
-            self.postButton.backgroundColor = UIColor.lightGray
+            self.postButton.backgroundColor = Colors.successGreen
             self.postButton.setTitle("Done!", for: .normal)
         }
     }

@@ -55,6 +55,19 @@ struct DateFormat {
     
 }
 
+struct defaultOrg {
+    
+    static let org = "OrganizApp"
+    static let orgId = "-LJUlAsTXfZ8PKPhEJRb"
+    
+}
+
+
+
+
+
+
+
 
 
 

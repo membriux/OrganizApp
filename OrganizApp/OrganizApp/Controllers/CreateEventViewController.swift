@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 class CreateEventViewController: UIViewController {
     
-    
+    // Properties
     let admin = Admin.current
     var datePicker = UIDatePicker()
     var time = 2
@@ -52,39 +52,47 @@ class CreateEventViewController: UIViewController {
         EventService.create(orgUid: admin.managingOrgId , title: title, location: location, dateAndTime: date, notes: notes, url: url) { (event) in
             guard let _ = event else { return }
             
+            // Display success message for a while to notify user
             self.successTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(CreateEventViewController.eventCreatedSuccess), userInfo: nil, repeats: true)
         }
 
     }
     
-    
+    // Notify the user that it's loading
     func setLoadingStatus() {
-        eventTitleTextField.text = ""
-        eventLocationTextField.text = ""
-        eventDateTextField.text = ""
-        eventURLTextField.text = ""
-        eventDescriptionTextView.text = ""
-        
         createEventButton.setTitle("Creating Event...", for: .normal)
         createEventButton.backgroundColor = UIColor.lightGray
     }
     
+    // Display success message if the event was succesfully created
     @objc func eventCreatedSuccess() {
         // Decrementing the game timer by 1
         time -= 1
+        
+        // Reset the button colors and the action
         if time == 0 {
+            
+            eventTitleTextField.text = ""
+            eventLocationTextField.text = ""
+            eventDateTextField.text = ""
+            eventURLTextField.text = ""
+            eventDescriptionTextView.text = ""
+            
             self.createEventButton.backgroundColor = Colors.lightOrange
             self.createEventButton.setTitle("Post", for: .normal)
             
+            // Reset timer
             successTimer.invalidate()
             time = 2
         }
         else {
-            self.createEventButton.backgroundColor = UIColor.lightGray
+            // Display the "Done" message
+            self.createEventButton.backgroundColor = Colors.successGreen
             self.createEventButton.setTitle("Done!", for: .normal)
         }
     }
-
+    
+    
 }
 
 
@@ -99,16 +107,15 @@ extension CreateEventViewController {
         eventDateTextField.text = dateFormatter.string(from: datePicker.date)
     }
     
+    // Add done button on top of keyboard so users can dismiss the keyboard
     func configureTextFieldInputs() {
         //init toolbar
         let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
         //create left side empty space so that done button set on right side
-        
         let leadingFlex = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
         let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
         
-        
+        // Set button on the right side
         toolbar.setItems([leadingFlex, doneBtn], animated: false)
         toolbar.sizeToFit()
         

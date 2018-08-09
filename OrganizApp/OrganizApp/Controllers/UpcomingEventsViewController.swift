@@ -42,6 +42,7 @@ class UpcomingEventsViewController: UIViewController {
         }
     }
     
+    // Get events from FireBase Database
     func getEvents() {
         OrganizationService.show(forUID: UD.currentOrgId) { (organization) in
             guard let organization = organization else { return }
@@ -78,7 +79,9 @@ extension UpcomingEventsViewController: UITableViewDataSource, UITableViewDelega
         cell.eventTimeLabel.text = eventDate[events[indexPath.row].title]?[4..<6].reduce("@") { $0 + " " + $1}
         cell.eventTitleLabel.text = events[indexPath.row].title
         cell.eventLocationLabel.text = events[indexPath.row].location
+        cell.eventUrlLabel.text = events[indexPath.row].url
         cell.eventNotesLabel.text = events[indexPath.row].notes
+        
         
         
         

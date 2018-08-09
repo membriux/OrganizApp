@@ -31,16 +31,17 @@ class HomeViewController: UIViewController {
     
     
     func configureViewController() {
-        if UD.currentOrg != "" {
-            // change title
-            organizationBarTitle.title = UD.currentOrg
-            getPosts()
-        } else {
-            organizationBarTitle.rightBarButtonItem?.isEnabled = false
+        if UD.currentOrg == "" {
+            UD.currentOrg = defaultOrg.org
+            UD.currentOrgId = defaultOrg.orgId
         }
+        organizationBarTitle.title = UD.currentOrg
+        getPosts()
+        
     }
     
     func getPosts() {
+        
         OrganizationService.show(forUID: UD.currentOrgId) { (organization) in
             guard let organization = organization else { return }
             PostService.posts(for: organization) { (posts) in

@@ -13,12 +13,6 @@ class Event {
     
     // Properties
     
-//    var dictValue: [String: Any] {
-//
-//    }
-    
-    // Properties
-    
     let uid: String
     
     var title: String = ""
@@ -52,19 +46,8 @@ class Event {
         self.title = title
         self.location = location
         self.dateAndTime = dateAndTime
-        
-        if url != "" {
-            self.url = "url: " + url
-        } else {
-            self.url = url
-        }
-        
-        if notes != "" {
-            self.notes = "Notes: " + notes
-        } else {
-            self.notes = notes
-        }
-        
+        self.url = url
+        self.notes = notes
     }
     
     
