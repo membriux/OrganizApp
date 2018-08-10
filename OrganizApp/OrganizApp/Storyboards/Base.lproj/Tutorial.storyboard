@@ -15,17 +15,17 @@
             <objects>
                 <viewController id="EUo-fZ-id2" customClass="TutorialViewController" customModule="OrganizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uI8-wI-Vah">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLv-4v-WHJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1280"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1380"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTn-Jl-fwU">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qpW-gg-4VS">
-                                                <rect key="frame" x="16" y="16" width="343" height="372"/>
+                                                <rect key="frame" x="16" y="16" width="343" height="338.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Welcome to OrganizApp!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFV-pT-adl">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
@@ -46,14 +46,14 @@
                                                         <color key="textColor" red="0.1450980392" green="0.23921568630000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Tap on  &quot;Add&quot; below your screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhq-ec-Zfp">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Tap on Add below your screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhq-ec-Zfp">
                                                         <rect key="frame" x="16" y="188" width="327" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YMl-7g-KJr">
-                                                        <rect key="frame" x="16" y="224.5" width="327" height="54"/>
+                                                        <rect key="frame" x="16" y="224.5" width="327" height="20.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Type the name of your organization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gQ-7N-wCm">
                                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="20.5"/>
@@ -61,22 +61,16 @@
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: Make sure your organization is registered with OrganizApp" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzt-gs-m2J">
-                                                                <rect key="frame" x="0.0" y="20.5" width="327" height="33.5"/>
-                                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
-                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Tap on the &quot;Add&quot; Button " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeN-S5-ktu">
-                                                        <rect key="frame" x="16" y="294.5" width="327" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Tap on the Add Button " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeN-S5-ktu">
+                                                        <rect key="frame" x="16" y="261" width="327" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now you should have your organization listed as shown below:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDD-EN-1lJ">
-                                                        <rect key="frame" x="0.0" y="331" width="343" height="41"/>
+                                                        <rect key="frame" x="0.0" y="297.5" width="343" height="41"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -93,14 +87,14 @@
                                                 </constraints>
                                             </stackView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addTutorial" translatesAutoresizingMaskIntoConstraints="NO" id="VCJ-hd-JPs">
-                                                <rect key="frame" x="57" y="407" width="260" height="400"/>
+                                                <rect key="frame" x="57" y="373.5" width="260" height="400"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="260" id="MCB-qh-zgl"/>
                                                     <constraint firstAttribute="height" constant="400" id="YLr-t7-PIh"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="T0Y-6e-z2y">
-                                                <rect key="frame" x="15" y="831" width="344" height="57.5"/>
+                                                <rect key="frame" x="15" y="797.5" width="344" height="57.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Once you tap on the organization you added, you should be able to view the news feed and upcoming events of your organization!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7t-1M-fM7">
                                                         <rect key="frame" x="0.0" y="0.0" width="344" height="57.5"/>
@@ -114,7 +108,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="SuZ-LN-UQV">
-                                                <rect key="frame" x="16" y="904.5" width="343" height="173"/>
+                                                <rect key="frame" x="16" y="871" width="343" height="173"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start by adding your first organization!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJY-GN-s4u">
                                                         <rect key="frame" x="25" y="0.0" width="293.5" height="20.5"/>
@@ -167,7 +161,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ik-0j-NPz">
-                                                <rect key="frame" x="16" y="1117.5" width="343" height="44"/>
+                                                <rect key="frame" x="16" y="1084" width="343" height="44"/>
                                                 <color key="backgroundColor" red="0.1450980392" green="0.23921568630000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="avj-vJ-cRn"/>
@@ -185,7 +179,7 @@
                                             <constraint firstAttribute="trailing" secondItem="SuZ-LN-UQV" secondAttribute="trailing" constant="16" id="AIU-CR-rIY"/>
                                             <constraint firstAttribute="trailing" secondItem="3ik-0j-NPz" secondAttribute="trailing" constant="16" id="HuX-LJ-flw"/>
                                             <constraint firstItem="VCJ-hd-JPs" firstAttribute="centerX" secondItem="qpW-gg-4VS" secondAttribute="centerX" id="IFs-g5-GSD"/>
-                                            <constraint firstAttribute="height" constant="1300" id="KC4-BV-HMb"/>
+                                            <constraint firstAttribute="height" constant="1400" id="KC4-BV-HMb"/>
                                             <constraint firstItem="qpW-gg-4VS" firstAttribute="top" secondItem="CTn-Jl-fwU" secondAttribute="top" constant="16" id="OAu-wZ-SFa"/>
                                             <constraint firstItem="qpW-gg-4VS" firstAttribute="leading" secondItem="CTn-Jl-fwU" secondAttribute="leading" constant="16" id="Tiy-3h-NKf"/>
                                             <constraint firstAttribute="trailing" secondItem="T0Y-6e-z2y" secondAttribute="trailing" constant="16" id="Wl9-Wk-VbB"/>
@@ -216,7 +210,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6ED-Ug-l2V"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1300"/>
+                    <size key="freeformSize" width="375" height="1400"/>
                     <connections>
                         <outlet property="addOrganizationButton" destination="oic-i7-sEn" id="oPO-hB-CYs"/>
                         <outlet property="errorLabel" destination="Ejn-sc-2gV" id="oeX-cb-fVb"/>

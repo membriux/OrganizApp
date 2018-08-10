@@ -166,7 +166,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E9i-q6-RUX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Events" image="tab_plus_black" selectedImage="tab_plus_black" id="3F8-Mz-O8Z"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Events" image="calendar" selectedImage="calendar" id="3F8-Mz-O8Z"/>
                     <connections>
                         <outlet property="eventsTable" destination="xC7-va-C5D" id="Uv1-Dn-z8e"/>
                         <outlet property="nagivationBarTitle" destination="yGk-IX-jPT" id="ySY-D3-CS9"/>
@@ -195,7 +195,7 @@
                                     <segue destination="pir-I4-NGb" kind="show" identifier="toCreateAdminUsername" id="uX4-Bg-oVd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your oragnizations!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3y-c6-ahJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your organizations!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3y-c6-ahJ">
                                 <rect key="frame" x="16" y="36" width="180.5" height="32"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -526,6 +526,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" width="30" height="30"/>
         <image name="tab_home_black" width="25" height="25"/>
         <image name="tab_plus_black" width="25" height="25"/>
     </resources>
